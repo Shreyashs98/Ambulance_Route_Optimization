@@ -1,6 +1,6 @@
 // src/services/api.js
 import axios from 'axios';
-const API_URL = 'http://localhost:5001/api'; // Change this to your backend URL
+const API_URL = 'https://ambulance-backend.vercel.app/api'; // Change this to your backend URL
 
 // Create an ambulance
 export const createAmbulance = async (ambulanceData) => {
