@@ -18,9 +18,9 @@ const App = () => {
                 <Route path="/register" element={<RegisterPage />} />
                 <Route path="/welcome" element={<WelcomePage />} />
                 <Route path="/add-ambulance" element={<AddAmbulancePage />} />
-                <Route path="/assign-ambulancepage" element={<AssignAmbulancePage />} />
+                <Route path="/available-ambulance" element={<AssignAmbulancePage />} />
                 <Route path="/assign-ambulance" element={<AssignAmbulance />} />
-                <Route path="/create-accident" element={<CreateAccident />} />
+                <Route path="/report-accident" element={<CreateAccident />} />
                 <Route path="/logs" element={<LogsPage />} />
                 <Route path="/accident-log" element={<AccidentLogPage />} />
                 {/* Add other routes as necessary */}

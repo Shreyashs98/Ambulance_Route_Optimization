@@ -45,10 +45,17 @@ const WelcomePage = () => {
             <div style={styles.buttonContainer}>
                 <button
                     style={styles.button}
-                    onClick={() => navigate('/assign-ambulancepage')} // Navigate to Assign Ambulance page
+                    onClick={() => navigate('/available-ambulance')} // Navigate to Available Ambulance page
                 >
-                    Assign Ambulance
+                    Available Ambulance
                 </button>
+                <button
+                    style={styles.button}
+                    onClick={() => navigate('/report-accident')} // Navigate to Assign Ambulance page
+                >
+                    Report Accident
+                </button>
+                
                 <button
                     style={styles.button}
                     onClick={() => navigate('/logs')} // Navigate to Logs page
