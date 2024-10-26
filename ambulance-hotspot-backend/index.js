@@ -15,7 +15,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: 'https://ambulance108.vercel.app/', // Update this to your React app's URL
+    origin: 'https://ambulance108.vercel.app', // Update this to your React app's URL
     methods: 'GET,POST,PUT,DELETE',
     credentials: true, // If you need to send cookies or authentication headers
 }));
