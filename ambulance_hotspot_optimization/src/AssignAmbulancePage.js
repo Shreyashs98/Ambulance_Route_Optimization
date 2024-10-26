@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { getAllAmbulances } from './services/api';
 
-// Setting up custom icon for ambulances
+// Custom icon for ambulances
 const ambulanceIcon = new L.Icon({
-    iconUrl: 'https://w7.pngwing.com/pngs/760/500/png-transparent-white-ambulance-ambulance-nontransporting-ems-vehicle-ambulance-compact-car-car-mode-of-transport-thumbnail.png', // Replace with the URL of your custom ambulance icon
-    iconSize: [30, 30], // Adjust icon size as needed
+    iconUrl: 'https://w7.pngwing.com/pngs/760/500/png-transparent-white-ambulance-ambulance-nontransporting-ems-vehicle-ambulance-compact-car-car-mode-of-transport-thumbnail.png', // Custom icon URL
+    iconSize: [30, 30], // Icon size
 });
 
 const AssignAmbulancePage = () => {
     const [ambulances, setAmbulances] = useState([]);
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchAmbulances = async () => {
@@ -33,9 +35,15 @@ const AssignAmbulancePage = () => {
         fetchAmbulances();
     }, []);
 
+    // Navigate to AddAmbulancePage
+    const handleAddAmbulanceClick = () => {
+        navigate('/add-ambulance');
+    };
+
     return (
         <div style={styles.container}>
             <h2 style={styles.heading}>Ambulance Slot: {ambulances.length}</h2>
+            <button onClick={handleAddAmbulanceClick} style={styles.addButton}>Add Ambulance</button>
             {loading ? (
                 <p>Loading...</p>
             ) : error ? (
@@ -96,6 +104,16 @@ const styles = {
     },
     heading: {
         marginBottom: '20px',
+    },
+    addButton: {
+        marginBottom: '20px',
+        padding: '10px 20px',
+        fontSize: '16px',
+        backgroundColor: '#007BFF',
+        color: '#fff',
+        border: 'none',
+        borderRadius: '5px',
+        cursor: 'pointer',
     },
     dashboard: {
         display: 'flex',
