@@ -26,6 +26,11 @@ app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded bodies
 // Database connection
 connectDB();
 
+app.get("/",(req,res) => {
+    res.send("API is running...")
+    console.log(PORT)
+  })
+  
 // Routes
 app.use('/api/auth', authRoutes); // Authentication routes
 app.use('/api/ambulance', ambulanceRoutes); // Ambulance management routes
