@@ -1,0 +1,78 @@
+/* src/components/CreateAccident.css */
+
+.accident-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.accident-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.accident-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.description-input {
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+.coordinates-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.coordinate-input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.coordinate-input:last-child {
+    margin-right: 0; /* Remove right margin from last input */
+}
+
+.submit-button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+.submit-button:focus {
+    outline: none;
+}
+
+.notification {
+    background-color: #d4edda; /* Light green for success */
+    color: #155724; /* Dark green for text */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb; /* Light green border */
+    border-radius: 4px;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+}
