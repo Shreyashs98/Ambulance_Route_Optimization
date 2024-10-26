@@ -1,39 +1,86 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { getAllAccidents } from './services/api';
+import axios from 'axios';
 
-// Sample data
-const accidentLogs = [
-    { id: 1, accidentId: 'ACC123', ambulanceNumber: 'KA-01-AB-1234', timestamp: '2024-10-26 10:30 AM' },
-    { id: 2, accidentId: 'ACC124', ambulanceNumber: 'KA-02-CD-5678', timestamp: '2024-10-26 11:15 AM' },
-    { id: 3, accidentId: 'ACC125', ambulanceNumber: 'KA-03-EF-9101', timestamp: '2024-10-26 12:00 PM' },
-    // Add more logs as needed
-];
+const API_KEY = '15ee415d2b9846aaa7e0da1261cd65c5'; // Replace with your actual OpenCage API key
 
 const LogsPage = () => {
-    const totalAccidents = accidentLogs.length; // Total number of accidents
+    const [accidentLogs, setAccidentLogs] = useState([]);
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchAccidentLogs = async () => {
+            try {
+                setLoading(true);
+                const data = await getAllAccidents();
+                
+                // Map through accident logs to add addresses
+                const logsWithAddresses = await Promise.all(data.map(async log => {
+                    const address = await getAddress(log.location.coordinates);
+                    return { ...log, address };
+                }));
+
+                setAccidentLogs(logsWithAddresses);
+            } catch (error) {
+                setError('Failed to fetch accident logs');
+                console.error('Error fetching accident logs:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchAccidentLogs();
+    }, []);
+
+    // Reverse geocode function to get address from coordinates
+    const getAddress = async (coordinates) => {
+        const [lng, lat] = coordinates;
+        try {
+            const response = await axios.get(`https://api.opencagedata.com/geocode/v1/json`, {
+                params: {
+                    q: `${lat},${lng}`,
+                    key: API_KEY,
+                },
+            });
+            return response.data.results[0]?.formatted || 'Address not found';
+        } catch (error) {
+            console.error('Error fetching address:', error);
+            return 'Error fetching address';
+        }
+    };
+
+    const totalAccidents = accidentLogs.length;
 
     return (
         <div style={styles.container}>
             <h2>Accident Logs</h2>
             <h3>Total Number of Accidents: {totalAccidents}</h3>
 
-            <table style={styles.table}>
-                <thead>
-                    <tr>
-                        <th style={styles.tableHeader}>Accident ID</th>
-                        <th style={styles.tableHeader}>Ambulance Number</th>
-                        <th style={styles.tableHeader}>Timestamp</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {accidentLogs.map(log => (
-                        <tr key={log.id}>
-                            <td style={styles.tableCell}>{log.accidentId}</td>
-                            <td style={styles.tableCell}>{log.ambulanceNumber}</td>
-                            <td style={styles.tableCell}>{log.timestamp}</td>
+            {loading ? (
+                <p>Loading...</p>
+            ) : error ? (
+                <p style={styles.error}>{error}</p>
+            ) : (
+                <table style={styles.table}>
+                    <thead>
+                        <tr>
+                            <th style={styles.tableHeader}>Accident Location (Address)</th>
+                            <th style={styles.tableHeader}>Accident Description</th>
+                            <th style={styles.tableHeader}>Timestamp</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {accidentLogs.map(log => (
+                            <tr key={log._id}>
+                                <td style={styles.tableCell}>{log.address}</td>
+                                <td style={styles.tableCell}>{log.description}</td>
+                                <td style={styles.tableCell}>{new Date(log.timestamp).toLocaleString()}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            )}
         </div>
     );
 };
@@ -66,6 +113,10 @@ const styles = {
         border: '1px solid #ccc',
         padding: '10px',
         textAlign: 'left',
+    },
+    error: {
+        color: 'red',
+        marginTop: '10px',
     },
 };
 
