@@ -1,13 +1,18 @@
-/* src/components/CreateAccident.css */
+/* CreateAccident.css */
 
 .accident-form-container {
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.accident-form-container:hover {
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
 }
 
 .accident-form {
@@ -18,16 +23,28 @@
 .accident-form h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #0073e6; /* A vibrant blue for the heading */
+    font-weight: 600;
+    font-size: 1.5em;
+    border-bottom: 2px solid #0073e6; /* Underline effect */
+    padding-bottom: 10px;
 }
 
 .description-input {
-    height: 100px;
-    padding: 10px;
+    height: 120px;
+    padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
     resize: none;
+    transition: border 0.3s ease;
+    font-size: 16px;
+}
+
+.description-input:focus {
+    border-color: #0073e6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
 }
 
 .coordinates-inputs {
@@ -38,41 +55,100 @@
 
 .coordinate-input {
     flex: 1;
-    padding: 10px;
+    padding: 12px;
     margin-right: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s ease;
 }
 
 .coordinate-input:last-child {
     margin-right: 0; /* Remove right margin from last input */
 }
 
+.coordinate-input:focus {
+    border-color: #0073e6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
+}
+
 .submit-button {
-    padding: 10px;
-    background-color: #28a745;
+    padding: 12px;
+    background-color: #28a745; /* Green button */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .submit-button:hover {
     background-color: #218838;
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
 .submit-button:focus {
     outline: none;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
 }
 
 .notification {
     background-color: #d4edda; /* Light green for success */
     color: #155724; /* Dark green for text */
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #c3e6cb; /* Light green border */
-    border-radius: 4px;
+    border-radius: 6px;
     text-align: center;
     transition: opacity 0.5s ease-in-out;
+}
+
+/* Search input styling */
+.search-input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #0073e6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
+}
+
+/* Search results styling */
+.search-results {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-results li {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-results li:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+.search-results li:hover {
+    background-color: #f1f1f1; /* Light gray on hover */
+}
+
+/* Map container */
+.map-container {
+    margin: 20px 0; /* Spacing around the map */
 }

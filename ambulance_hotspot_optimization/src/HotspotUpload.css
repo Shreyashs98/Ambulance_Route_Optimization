@@ -1,0 +1,121 @@
+/* General container styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #eef1f5; /* Light background for contrast */
+    color: #333; /* Default text color */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Card styling */
+.card {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Heading styling */
+.heading {
+    font-size: 2em;
+    font-weight: bold;
+    color: #0073e6; /* Primary blue */
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dropdown-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+.dropdown {
+    padding: 12px;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #0073e6; /* Blue border */
+    border-radius: 6px;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+.dropdown:hover {
+    border-color: #005bb5; /* Darker blue on hover */
+}
+
+/* Button styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 115, 230, 0.2);
+    background-color: #0073e6; /* Primary blue */
+}
+
+.button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+    box-shadow: 0 6px 12px rgba(0, 115, 230, 0.3);
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 115, 230, 0.4);
+}
+
+/* Map container styling */
+.map-container {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mapHeading {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0073e6; /* Primary blue */
+    margin-bottom: 10px;
+}
+
+/* Error message styling */
+.error {
+    color: #d9534f; /* Red for errors */
+    margin-top: 10px;
+    font-weight: bold;
+}

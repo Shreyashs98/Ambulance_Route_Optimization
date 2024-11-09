@@ -9,6 +9,7 @@ import AssignAmbulancePage from './AssignAmbulancePage'; // Import your AssignAm
 import LogsPage from './LogsPage'; // Import your LogsPage component
 import AccidentLogPage from './AccidentLogPage'; // Import your AccidentLogPage component
 import CreateAccident from './components/CreateAccident';
+import HotspotUpload from './HotspotUpload';
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
                 <Route path="/register" element={<RegisterPage />} />
                 <Route path="/welcome" element={<WelcomePage />} />
                 <Route path="/add-ambulance" element={<AddAmbulancePage />} />
+                <Route path="/hotspots" element={<HotspotUpload />} />
                 <Route path="/available-ambulance" element={<AssignAmbulancePage />} />
                 <Route path="/assign-ambulance" element={<AssignAmbulance />} />
                 <Route path="/report-accident" element={<CreateAccident />} />

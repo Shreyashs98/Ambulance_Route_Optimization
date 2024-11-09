@@ -4,6 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { getAllAmbulances } from './services/api';
+import './styles.css'
 
 // Custom icon for ambulances
 const ambulanceIcon = new L.Icon({

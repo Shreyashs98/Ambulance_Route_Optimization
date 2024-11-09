@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { createAccident } from '../services/api';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import './CreateAccident.css';
 
 const accidentIcon = new L.Icon({
@@ -20,9 +20,7 @@ const CreateAccident = () => {
     const [notification, setNotification] = useState('');
     const [mapCenter, setMapCenter] = useState([defaultLatitude, defaultLongitude]);
     const [markerPosition, setMarkerPosition] = useState([defaultLatitude, defaultLongitude]);
-    const [searchQuery, setSearchQuery] = useState('');
-    const [searchResults, setSearchResults] = useState([]);
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate();
 
     useEffect(() => {
         const getCurrentLocation = () => {
@@ -51,22 +49,6 @@ const CreateAccident = () => {
         setLocation({ type: 'Point', coordinates: [lng, lat] });
     };
 
-    const handleSearch = async () => {
-        if (!searchQuery) return;
-        const response = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(searchQuery)}&format=json&addressdetails=1`);
-        const data = await response.json();
-        setSearchResults(data);
-    };
-
-    const handleSelectLocation = (result) => {
-        const { lat, lon } = result;
-        setMarkerPosition([lat, lon]);
-        setLocation({ type: 'Point', coordinates: [lon, lat] });
-        setMapCenter([lat, lon]);
-        setSearchResults([]);
-        setSearchQuery('');
-    };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const accidentData = { location, description };
@@ -77,7 +59,7 @@ const CreateAccident = () => {
             setNotification('Accident created successfully!');
             setDescription('');
 
-            // Navigate to Assign Ambulance page and pass the accident location
+            // Redirect to Assign Ambulance page with accident location
             navigate('/assign-ambulance', { state: { accidentLocation: location.coordinates } });
         } catch (error) {
             console.error('Error creating accident:', error);
@@ -101,23 +83,6 @@ const CreateAccident = () => {
                     required
                     className="description-input"
                 />
-                <input
-                    type="text"
-                    placeholder="Search Location"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    onKeyUp={(e) => e.key === 'Enter' && handleSearch()}
-                    className="search-input"
-                />
-                {searchResults.length > 0 && (
-                    <ul className="search-results">
-                        {searchResults.map((result) => (
-                            <li key={result.place_id} onClick={() => handleSelectLocation(result)}>
-                                {result.display_name}
-                            </li>
-                        ))}
-                    </ul>
-                )}
                 <div className="map-container">
                     <MapContainer
                         center={mapCenter}
