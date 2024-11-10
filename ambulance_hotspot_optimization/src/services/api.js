@@ -1,6 +1,9 @@
 // src/services/api.js
 import axios from 'axios';
-const API_URL = 'https://ambulance-backend.vercel.app/api'; // Change this to your backend URL
+
+// Get the API URL from the environment variables based on the environment
+const API_URL = process.env.REACT_APP_API_URL_LOCAL || process.env.REACT_APP_API_URL_PROD;
+
 
 // Create an ambulance
 export const createAmbulance = async (ambulanceData) => {

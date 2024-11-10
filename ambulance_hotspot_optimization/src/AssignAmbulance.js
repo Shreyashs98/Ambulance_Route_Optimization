@@ -1,257 +1,207 @@
-import React, { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Polyline } from 'react-leaflet';
+import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
-import { getAllAmbulances } from './services/api'; // Ensure this path is correct
-
-// Custom icon for the ambulance marker
-const ambulanceIcon = new L.Icon({
-    iconUrl: 'https://w7.pngwing.com/pngs/760/500/png-transparent-white-ambulance-ambulance-nontransporting-ems-vehicle-ambulance-compact-car-car-mode-of-transport-thumbnail.png',
-    iconSize: [30, 30], // Size of the icon
-});
-
-// Custom icon for the user's location marker
-const userLocationIcon = new L.Icon({
-    iconUrl: 'https://cdn-icons-png.flaticon.com/512/12207/12207498.png', // Your marker image URL
-    iconSize: [40, 40], // Adjust size according to your preference
-});
+import 'leaflet-routing-machine';
+import 'leaflet/dist/leaflet.css';
+import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
+import haversine from 'haversine-distance';
+import { getAllAmbulances } from './services/api';
 
 const AssignAmbulance = () => {
-    const [userLocation, setUserLocation] = useState(null);
-    const [error, setError] = useState(null);
-    const [ambulances, setAmbulances] = useState([]);
-    const [selectedAmbulance, setSelectedAmbulance] = useState(null);
-    const [route, setRoute] = useState([]);
-    const [currentAmbulancePosition, setCurrentAmbulancePosition] = useState(null);
-    const [animationInterval, setAnimationInterval] = useState(null);
-    const [destination, setDestination] = useState(null); // State to hold the destination
+  const mapRef = useRef(null);
+  const [userLocation, setUserLocation] = useState(null);
+  const [destinationLocation, setDestinationLocation] = useState(null);
+  const [nearestAmbulance, setNearestAmbulance] = useState(null);
+  const [ambulanceMarker, setAmbulanceMarker] = useState(null);
+  const [showAssignButton, setShowAssignButton] = useState(false);
+  const [map, setMap] = useState(null);
+  const [destinationMarker, setDestinationMarker] = useState(null);
 
-    useEffect(() => {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    const { latitude, longitude } = position.coords;
-                    setUserLocation({ lat: latitude, lng: longitude });
-                },
-                (err) => {
-                    setError('Unable to retrieve your location.');
-                }
-            );
-        } else {
-            setError('Geolocation is not supported by this browser.');
+  useEffect(() => {
+    // Make sure the map container is available before initializing the map
+    if (!mapRef.current) {
+      console.error('Map container not found!');
+      return;
+    }
+
+    // Initialize the map
+    const initMap = L.map(mapRef.current).setView([28.2380, 83.9956], 11);
+
+    L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+      attribution: 'Leaflet &copy; OpenStreetMap contributors',
+      maxZoom: 18,
+    }).addTo(initMap);
+
+    setMap(initMap);
+
+    // Custom icon for destination marker
+    const destinationIcon = L.icon({
+      iconUrl: 'https://cdn-icons-png.flaticon.com/512/12207/12207498.png',
+      iconSize: [50, 50],  // Adjust the size as needed
+      iconAnchor: [25, 50],  // Set the anchor to the bottom of the icon
+    });
+
+    // Fetch user's geolocation
+    const getUserLocation = () => {
+      if (!navigator.geolocation) {
+        console.error('Geolocation is not supported by this browser.');
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const userCoords = [position.coords.latitude, position.coords.longitude];
+          setUserLocation(userCoords);
+          setDestinationLocation(userCoords);
+
+          // Add draggable destination marker
+          const destMarker = L.marker(userCoords, { icon: destinationIcon, draggable: true })
+            .addTo(initMap)
+            .bindPopup('Destination')
+            .openPopup();
+          setDestinationMarker(destMarker);
+
+          // Listen for drag events on destination marker
+          destMarker.on('dragend', (e) => {
+            const { lat, lng } = e.target.getLatLng();
+            setDestinationLocation([lat, lng]);
+            handleFindNearestAmbulance(); // Recalculate nearest ambulance based on new destination
+          });
+
+          // Click event on map to move destination marker
+          initMap.on('click', (e) => {
+            const { lat, lng } = e.latlng;
+            destMarker.setLatLng([lat, lng]).update();
+            setDestinationLocation([lat, lng]);
+            handleFindNearestAmbulance(); // Recalculate nearest ambulance based on new destination
+          });
+        },
+        (error) => {
+          console.error('Error getting geolocation:', error);
         }
-    }, []);
+      );
+    };
 
-    useEffect(() => {
-        const fetchAmbulances = async () => {
-            try {
-                const data = await getAllAmbulances();
-                setAmbulances(data);
-            } catch (error) {
-                setError('Error retrieving ambulances.');
-            }
-        };
+    // Get user's location
+    getUserLocation();
 
-        fetchAmbulances();
-    }, []);
+    // Cleanup map on component unmount
+    return () => {
+      if (initMap) {
+        initMap.off();
+        initMap.remove();
+      }
+    };
+  }, []);
 
-    const findNearestAmbulance = () => {
-        if (userLocation) {
-            let nearest = null;
-            let shortestDistance = Infinity;
+  // Function to find the nearest ambulance based on user's location and destination
+  const handleFindNearestAmbulance = async () => {
+    if (!userLocation || !destinationLocation) return;
 
-            ambulances.forEach((ambulance) => {
-                if (ambulance.available) {
-                    const distance = calculateDistance(userLocation, {
-                        lat: ambulance.location.coordinates[1],
-                        lng: ambulance.location.coordinates[0],
-                    });
-                    if (distance < shortestDistance) {
-                        shortestDistance = distance;
-                        nearest = ambulance;
-                    }
-                }
-            });
+    console.log('Finding nearest ambulance...');
+    const taxiIcon = L.icon({
+      iconUrl: 'https://w7.pngwing.com/pngs/760/500/png-transparent-white-ambulance-ambulance-nontransporting-ems-vehicle-ambulance-compact-car-car-mode-of-transport-thumbnail.png',
+      iconSize: [70, 70],
+    });
 
-            setSelectedAmbulance(nearest);
+    try {
+      const ambulances = await getAllAmbulances();
+      console.log('Ambulances:', ambulances);
+
+      let closestAmbulance = null;
+      let shortestDistance = Infinity;
+
+      // Calculate distance to each ambulance
+      ambulances.forEach((ambulance) => {
+        const ambulanceCoords = [ambulance.location.coordinates[1], ambulance.location.coordinates[0]];
+        const distance = haversine(destinationLocation, ambulanceCoords);
+
+        console.log(`Distance to ambulance ${ambulance.numberPlate}: ${distance}`);
+        if (distance < shortestDistance) {
+          shortestDistance = distance;
+          closestAmbulance = ambulance;
         }
-    };
+      });
 
-    const calculateDistance = (loc1, loc2) => {
-        const R = 6371; // Radius of the Earth in kilometers
-        const dLat = (loc2.lat - loc1.lat) * (Math.PI / 180);
-        const dLng = (loc2.lng - loc1.lng) * (Math.PI / 180);
-        const a =
-            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-            Math.cos(loc1.lat * (Math.PI / 180)) * Math.cos(loc2.lat * (Math.PI / 180)) *
-            Math.sin(dLng / 2) * Math.sin(dLng / 2);
-        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        return R * c; // Distance in kilometers
-    };
+      // Set nearest ambulance and add marker to the map
+      if (closestAmbulance) {
+        setNearestAmbulance(closestAmbulance);
 
-    const handleSubmit = async () => {
-        if (selectedAmbulance && destination) {
-            alert(`Ambulance assigned: ${selectedAmbulance.numberPlate}`);
-            
-            const updatedAmbulance = { ...selectedAmbulance, available: false };
-            setAmbulances((prevAmbulances) => 
-                prevAmbulances.map(ambulance => 
-                    ambulance._id === selectedAmbulance._id ? updatedAmbulance : ambulance
-                )
-            );
-
-            // Calculate the route to the destination
-            await calculateRoute({
-                lat: selectedAmbulance.location.coordinates[1],
-                lng: selectedAmbulance.location.coordinates[0],
-            }, destination);
-
-            // Start animating the ambulance
-            animateAmbulance();
-        } else {
-            alert('No ambulance selected or destination not set.');
+        if (ambulanceMarker) {
+          map.removeLayer(ambulanceMarker);
         }
-    };
 
-    const calculateRoute = async (origin, destination) => {
-        const response = await fetch(`https://router.project-osrm.org/route/v1/driving/${origin.lng},${origin.lat};${destination.lng},${destination.lat}?overview=full`);
-        
-        if (response.ok) {
-            const data = await response.json();
-            const routeCoordinates = data.routes[0].geometry.coordinates.map(coord => [coord[1], coord[0]]);
-            setRoute(routeCoordinates);
-        } else {
-            console.error('Error fetching route:', response.statusText);
-        }
-    };
+        const marker = L.marker(
+          [closestAmbulance.location.coordinates[1], closestAmbulance.location.coordinates[0]],
+          { icon: taxiIcon }
+        ).addTo(map).bindPopup(`Ambulance: ${closestAmbulance.numberPlate}`).openPopup();
 
-    const animateAmbulance = () => {
-        if (!route.length) return;
-    
-        const speed = 90; // Adjust this value to increase or decrease speed (in degrees per second)
-        let currentIndex = 0;
-        let currentPosition = [route[0][0], route[0][1]]; // Start position
-        setCurrentAmbulancePosition(currentPosition);
-    
-        const interval = setInterval(() => {
-            if (currentIndex < route.length - 1) {
-                // Calculate distance to next point
-                const nextPoint = route[currentIndex + 1];
-                const latDiff = nextPoint[0] - currentPosition[0];
-                const lngDiff = nextPoint[1] - currentPosition[1];
-    
-                // Calculate distance between points
-                const distance = Math.sqrt(latDiff * latDiff + lngDiff * lngDiff);
-    
-                // If distance is less than the speed, move to next point
-                if (distance < speed) {
-                    currentPosition = nextPoint;
-                    currentIndex++;
-                } else {
-                    // Move towards the next point based on speed
-                    currentPosition[0] += (latDiff / distance) * speed; // Move in latitude
-                    currentPosition[1] += (lngDiff / distance) * speed; // Move in longitude
-                }
-    
-                setCurrentAmbulancePosition([...currentPosition]);
-            } else {
-                clearInterval(interval);
-                setCurrentAmbulancePosition(null); // Reset position when done
-            }
-        }, 100); // Set interval time (in milliseconds)
-    
-        setAnimationInterval(interval);
-    };
+        setAmbulanceMarker(marker);
 
-    const handleMapClick = (e) => {
-        const { lat, lng } = e.latlng;
-        setDestination({ lat, lng }); // Set the destination from the map click
-        alert(`Destination set at: ${lat}, ${lng}`); // Notify the user of the destination
-    };
+        marker.on('click', () => {
+          setShowAssignButton(true);
+        });
 
-    return (
-        <div style={styles.container}>
-            <h2>Assign Ambulance</h2>
+        console.log('Nearest ambulance found:', closestAmbulance);
+      } else {
+        console.log('No ambulances found nearby.');
+      }
+    } catch (error) {
+      console.error('Error fetching ambulances:', error);
+    }
+  };
 
-            {error && <p style={styles.error}>{error}</p>}
+  // Function to assign the ambulance and display the route
+  const handleAssignAmbulance = () => {
+    if (!ambulanceMarker || !nearestAmbulance || !destinationLocation) return;
 
-            {userLocation ? (
-                <div style={styles.mapContainer}>
-                    <MapContainer 
-                        center={userLocation} 
-                        zoom={13} 
-                        style={{ height: '400px', width: '100%' }} 
-                        onClick={handleMapClick} // Handle map click
-                    >
-                        <TileLayer
-                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                        />
-                        <Marker position={userLocation} icon={userLocationIcon}> {/* Use custom user location icon */}
-                            <Popup>You are here</Popup>
-                        </Marker>
-                        {selectedAmbulance && (
-                            <Marker
-                                position={{
-                                    lat: selectedAmbulance.location.coordinates[1],
-                                    lng: selectedAmbulance.location.coordinates[0],
-                                }}
-                                icon={ambulanceIcon}
-                            >
-                                <Popup>{selectedAmbulance.numberPlate}</Popup>
-                            </Marker>
-                        )}
-                        {currentAmbulancePosition && (
-                            <Marker
-                                position={currentAmbulancePosition}
-                                icon={ambulanceIcon}
-                            >
-                                <Popup>Ambulance is on the way!</Popup>
-                            </Marker>
-                        )}
-                        {route.length > 0 && (
-                            <Polyline positions={route} color="blue" />
-                        )}
-                    </MapContainer>
-                    <button style={styles.button} onClick={findNearestAmbulance}>
-                        Find Nearest Ambulance
-                    </button>
-                </div>
-            ) : (
-                <p>Loading your location...</p>
-            )}
+    setShowAssignButton(false);
 
-            {selectedAmbulance && (
-                <div>
-                    <h3>Selected Ambulance: {selectedAmbulance.numberPlate}</h3>
-                    <button style={styles.button} onClick={handleSubmit}>
-                        Assign Ambulance
-                    </button>
-                </div>
-            )}
-        </div>
-    );
-};
+    L.Routing.control({
+      waypoints: [
+        L.latLng(nearestAmbulance.location.coordinates[1], nearestAmbulance.location.coordinates[0]),
+        L.latLng(destinationLocation[0], destinationLocation[1]),
+      ],
+    }).on('routesfound', (e) => {
+      const routes = e.routes[0].coordinates;
+      routes.forEach((coord, index) => {
+        setTimeout(() => {
+          ambulanceMarker.setLatLng([coord.lat, coord.lng]);
+        }, 100 * index);
+      });
+    }).addTo(map);
+  };
 
-const styles = {
-    container: {
-        padding: '20px',
-    },
-    mapContainer: {
-        marginBottom: '20px',
-    },
-    button: {
-        padding: '10px 20px',
-        margin: '5px',
-        cursor: 'pointer',
-        border: 'none',
-        backgroundColor: '#28a745',
-        color: '#fff',
-        borderRadius: '5px',
-        fontSize: '16px',
-    },
-    error: {
-        color: 'red',
-    },
+  return (
+    <div style={{ position: 'relative', width: '100%', height: '100vh' }}>
+      <div ref={mapRef} style={{ width: '100%', height: '100%' }}></div>
+      <button 
+        onClick={handleFindNearestAmbulance}
+        style={{
+          position: 'absolute',
+          top: '10px',
+          left: '10px',
+          padding: '10px',
+          zIndex: 1000,
+        }}
+      >
+        Find Nearest Ambulance
+      </button>
+      {showAssignButton && (
+        <button 
+          onClick={handleAssignAmbulance}
+          style={{
+            position: 'absolute',
+            top: '50px',
+            left: '10px',
+            padding: '10px',
+            zIndex: 1000,
+          }}
+        >
+          Assign Ambulance
+        </button>
+      )}
+    </div>
+  );
 };
 
 export default AssignAmbulance;

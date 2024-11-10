@@ -1,5 +1,3 @@
-// server.js
-
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -13,24 +11,37 @@ const accidentRoutes = require('./routes/accidentRoutes');
 // Initialize the Express application
 const app = express();
 
-// Middleware
+// CORS middleware to handle multiple origins
+const allowedOrigins = [
+  'http://localhost:3000',         // Local development
+  'https://ambulance108.vercel.app' // Production URL
+];
+
 app.use(cors({
-    origin: 'https://ambulance108.vercel.app', // Update this to your React app's URL
-    methods: 'GET,POST,PUT,DELETE',
-    credentials: true, // If you need to send cookies or authentication headers
+  origin: function(origin, callback) {
+    // Allow requests with no origin (like mobile apps or Postman)
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: 'GET,POST,PUT,DELETE',
+  credentials: true, // If you need to send cookies or authentication headers
 }));
- // Enable CORS
+
+// Middleware
 app.use(bodyParser.json()); // Parse JSON bodies
 app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded bodies
 
 // Database connection
 connectDB();
 
-app.get("/",(req,res) => {
-    res.send("API is running...")
-    console.log(PORT)
-  })
-  
+app.get("/", (req, res) => {
+  res.send("API is running...");
+  console.log(config.PORT);
+});
+
 // Routes
 app.use('/api/auth', authRoutes); // Authentication routes
 app.use('/api/ambulance', ambulanceRoutes); // Ambulance management routes
@@ -38,7 +49,7 @@ app.use('/api/accident', accidentRoutes); // Accident management routes
 
 // Start the server
 app.listen(config.PORT, () => {
-    console.log(`Server is running on port ${config.PORT}`);
+  console.log(`Server is running on port ${config.PORT}`);
 });
 
 
