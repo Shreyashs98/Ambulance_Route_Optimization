@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Get the API URL from the environment variables based on the environment
-const API_URL = process.env.REACT_APP_API_URL_LOCAL || process.env.REACT_APP_API_URL_PROD;
+const API_URL = process.env.REACT_APP_API_URL;  // Use the correct API URL based on environment
 
 
 // Create an ambulance
