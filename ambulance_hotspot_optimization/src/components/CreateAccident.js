@@ -1,15 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { createAccident } from '../services/api';
 import { useNavigate } from 'react-router-dom';
 import './CreateAccident.css';
 
+// Custom icon for the accident marker
 const accidentIcon = new L.Icon({
     iconUrl: 'https://cdn-icons-png.flaticon.com/512/12207/12207498.png',
     iconSize: [50, 50],
 });
+
+// Component to set map center dynamically
+const SetMapCenter = ({ center }) => {
+    const map = useMap();
+    map.setView(center);
+    return null;
+};
 
 const CreateAccident = () => {
     const defaultLatitude = 12.871216912602229;
@@ -88,8 +96,8 @@ const CreateAccident = () => {
                         center={mapCenter}
                         zoom={13}
                         style={{ height: '300px', width: '100%' }}
-                        draggable={true}
                     >
+                        <SetMapCenter center={mapCenter} />
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
