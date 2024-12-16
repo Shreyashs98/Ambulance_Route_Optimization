@@ -1,0 +1,2334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_21bbbc7894b74992007e9be2f7760096 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_21bbbc7894b74992007e9be2f7760096" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_21bbbc7894b74992007e9be2f7760096 = L.map(
+                "map_21bbbc7894b74992007e9be2f7760096",
+                {
+                    center: [12.873726924115331, 74.84059703510931],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dabd9058621aa032fcf3c31105f5cef1 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_dabd9058621aa032fcf3c31105f5cef1.addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+            var circle_marker_0ae4587964236fab627d43c572846463 = L.circleMarker(
+                [12.884076874061002, 74.84760589361646],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_29553d9fd1249702af800f4cc55259de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2f1e5b030ef74f5907feacd2aa93f4b = $(`<div id="html_c2f1e5b030ef74f5907feacd2aa93f4b" style="width: 100.0%; height: 100.0%;">Location: Sanoor<br>Number of Accidents: 8</div>`)[0];
+                popup_29553d9fd1249702af800f4cc55259de.setContent(html_c2f1e5b030ef74f5907feacd2aa93f4b);
+            
+        
+
+        circle_marker_0ae4587964236fab627d43c572846463.bindPopup(popup_29553d9fd1249702af800f4cc55259de)
+        ;
+
+        
+    
+    
+            var circle_marker_1cbf2bb580f8f67e27970b1ea6a6ffe6 = L.circleMarker(
+                [12.880618176117611, 74.85620310302686],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_5ee8554f17623b1857d4e353da8a89a8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a64ca205a26b13c78761335814ccd515 = $(`<div id="html_a64ca205a26b13c78761335814ccd515" style="width: 100.0%; height: 100.0%;">Location: Urva<br>Number of Accidents: 2</div>`)[0];
+                popup_5ee8554f17623b1857d4e353da8a89a8.setContent(html_a64ca205a26b13c78761335814ccd515);
+            
+        
+
+        circle_marker_1cbf2bb580f8f67e27970b1ea6a6ffe6.bindPopup(popup_5ee8554f17623b1857d4e353da8a89a8)
+        ;
+
+        
+    
+    
+            var circle_marker_3224a31486d8e8905c816fcf7aaae512 = L.circleMarker(
+                [12.867122863233234, 74.83212142488247],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_ebd93f042c0bbc55331f246f01931a12 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f4bf2c5f7f4eafd82daf485e0b343e2 = $(`<div id="html_3f4bf2c5f7f4eafd82daf485e0b343e2" style="width: 100.0%; height: 100.0%;">Location: Muloor<br>Number of Accidents: 5</div>`)[0];
+                popup_ebd93f042c0bbc55331f246f01931a12.setContent(html_3f4bf2c5f7f4eafd82daf485e0b343e2);
+            
+        
+
+        circle_marker_3224a31486d8e8905c816fcf7aaae512.bindPopup(popup_ebd93f042c0bbc55331f246f01931a12)
+        ;
+
+        
+    
+    
+            var circle_marker_cc4d5a961d1af59d0432ed0307fd29df = L.circleMarker(
+                [12.86065667001172, 74.85165956883164],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.3, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_3bcf56e3381e9017e9ed76820dc6bf1b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a04810327cea359a1ea395a7953b685b = $(`<div id="html_a04810327cea359a1ea395a7953b685b" style="width: 100.0%; height: 100.0%;">Location: Farangipete<br>Number of Accidents: 3</div>`)[0];
+                popup_3bcf56e3381e9017e9ed76820dc6bf1b.setContent(html_a04810327cea359a1ea395a7953b685b);
+            
+        
+
+        circle_marker_cc4d5a961d1af59d0432ed0307fd29df.bindPopup(popup_3bcf56e3381e9017e9ed76820dc6bf1b)
+        ;
+
+        
+    
+    
+            var circle_marker_707def33b4b2d668d9450b5125678877 = L.circleMarker(
+                [12.870750988854743, 74.82708537172834],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_faece8cd9c95902b8a7f7666775ccfef = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aa95235bee0d2639eeffcc825cb363b1 = $(`<div id="html_aa95235bee0d2639eeffcc825cb363b1" style="width: 100.0%; height: 100.0%;">Location: Manjeshwar<br>Number of Accidents: 8</div>`)[0];
+                popup_faece8cd9c95902b8a7f7666775ccfef.setContent(html_aa95235bee0d2639eeffcc825cb363b1);
+            
+        
+
+        circle_marker_707def33b4b2d668d9450b5125678877.bindPopup(popup_faece8cd9c95902b8a7f7666775ccfef)
+        ;
+
+        
+    
+    
+            var circle_marker_84ef0f5d2343e9ad62e17a9dd6124711 = L.circleMarker(
+                [12.866497365498017, 74.83121842147472],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.9, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_e65d4c34cc32a8be7a31a280357e2ee2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c6c2bff1c4f25b7b2032443b78d74a88 = $(`<div id="html_c6c2bff1c4f25b7b2032443b78d74a88" style="width: 100.0%; height: 100.0%;">Location: Balmatta<br>Number of Accidents: 9</div>`)[0];
+                popup_e65d4c34cc32a8be7a31a280357e2ee2.setContent(html_c6c2bff1c4f25b7b2032443b78d74a88);
+            
+        
+
+        circle_marker_84ef0f5d2343e9ad62e17a9dd6124711.bindPopup(popup_e65d4c34cc32a8be7a31a280357e2ee2)
+        ;
+
+        
+    
+    
+            var circle_marker_2dd44124975dfd14925f6a546f851809 = L.circleMarker(
+                [12.88165194356139, 74.85418331886842],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_3ef1fc867a10ec1de19a0182e2b2df3e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f38dcbf78be54f1c06de1efb4e68eea8 = $(`<div id="html_f38dcbf78be54f1c06de1efb4e68eea8" style="width: 100.0%; height: 100.0%;">Location: Falnir<br>Number of Accidents: 8</div>`)[0];
+                popup_3ef1fc867a10ec1de19a0182e2b2df3e.setContent(html_f38dcbf78be54f1c06de1efb4e68eea8);
+            
+        
+
+        circle_marker_2dd44124975dfd14925f6a546f851809.bindPopup(popup_3ef1fc867a10ec1de19a0182e2b2df3e)
+        ;
+
+        
+    
+    
+            var circle_marker_f58cc75de0566a372161056310008b10 = L.circleMarker(
+                [12.862432509043158, 74.83570144596878],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.9, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_36c8ce5fc0b17af47c5ca5e1bab54a89 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e36c8a14cc8c2cef63900266f8b480fb = $(`<div id="html_e36c8a14cc8c2cef63900266f8b480fb" style="width: 100.0%; height: 100.0%;">Location: Sulya<br>Number of Accidents: 9</div>`)[0];
+                popup_36c8ce5fc0b17af47c5ca5e1bab54a89.setContent(html_e36c8a14cc8c2cef63900266f8b480fb);
+            
+        
+
+        circle_marker_f58cc75de0566a372161056310008b10.bindPopup(popup_36c8ce5fc0b17af47c5ca5e1bab54a89)
+        ;
+
+        
+    
+    
+            var circle_marker_defd5d17ea13151b43ae5d41178b601a = L.circleMarker(
+                [12.869363878166094, 74.85503652386134],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_00730f47b009e68a00942e06d7b8f52b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3aed903084bcf59d0cabb4689b2e8012 = $(`<div id="html_3aed903084bcf59d0cabb4689b2e8012" style="width: 100.0%; height: 100.0%;">Location: Bettampady<br>Number of Accidents: 10</div>`)[0];
+                popup_00730f47b009e68a00942e06d7b8f52b.setContent(html_3aed903084bcf59d0cabb4689b2e8012);
+            
+        
+
+        circle_marker_defd5d17ea13151b43ae5d41178b601a.bindPopup(popup_00730f47b009e68a00942e06d7b8f52b)
+        ;
+
+        
+    
+    
+            var circle_marker_e1a4c4b2ce88a3b589f9ed5eb8975eee = L.circleMarker(
+                [12.8736352815782, 74.82642430080864],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.1, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_ee3130ff76586a637fe6b69bb56cb92f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0e6f4cc272a734dbfceadb2d28b2aa53 = $(`<div id="html_0e6f4cc272a734dbfceadb2d28b2aa53" style="width: 100.0%; height: 100.0%;">Location: BC Road<br>Number of Accidents: 1</div>`)[0];
+                popup_ee3130ff76586a637fe6b69bb56cb92f.setContent(html_0e6f4cc272a734dbfceadb2d28b2aa53);
+            
+        
+
+        circle_marker_e1a4c4b2ce88a3b589f9ed5eb8975eee.bindPopup(popup_ee3130ff76586a637fe6b69bb56cb92f)
+        ;
+
+        
+    
+    
+            var circle_marker_e58dc4c4f16546573ee720a9755c0ded = L.circleMarker(
+                [12.886624515407814, 74.8282543395565],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.1, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_19f4d0f9ff8fe21ebf64bcd14aed173a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ca98885b2a7a3d1594c5f4f443b18082 = $(`<div id="html_ca98885b2a7a3d1594c5f4f443b18082" style="width: 100.0%; height: 100.0%;">Location: Padupanambur<br>Number of Accidents: 1</div>`)[0];
+                popup_19f4d0f9ff8fe21ebf64bcd14aed173a.setContent(html_ca98885b2a7a3d1594c5f4f443b18082);
+            
+        
+
+        circle_marker_e58dc4c4f16546573ee720a9755c0ded.bindPopup(popup_19f4d0f9ff8fe21ebf64bcd14aed173a)
+        ;
+
+        
+    
+    
+            var circle_marker_ebd5a3c35ef2f71e8e93dfa7fccbf831 = L.circleMarker(
+                [12.870487474232696, 74.85030682560765],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_4ef652d64204beaf8a4049abd6481b8a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0f4b48e1d7045035b5127c5eea8ae770 = $(`<div id="html_0f4b48e1d7045035b5127c5eea8ae770" style="width: 100.0%; height: 100.0%;">Location: Bantwal<br>Number of Accidents: 8</div>`)[0];
+                popup_4ef652d64204beaf8a4049abd6481b8a.setContent(html_0f4b48e1d7045035b5127c5eea8ae770);
+            
+        
+
+        circle_marker_ebd5a3c35ef2f71e8e93dfa7fccbf831.bindPopup(popup_4ef652d64204beaf8a4049abd6481b8a)
+        ;
+
+        
+    
+    
+            var circle_marker_76dba9836da976dc98121ad7a903186c = L.circleMarker(
+                [12.861573513775989, 74.82420936271463],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_573681f0b240dbf9442a33ba5e435595 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1a68f36dfe54d0b4e46a3b8608d75832 = $(`<div id="html_1a68f36dfe54d0b4e46a3b8608d75832" style="width: 100.0%; height: 100.0%;">Location: Mulihithlu<br>Number of Accidents: 6</div>`)[0];
+                popup_573681f0b240dbf9442a33ba5e435595.setContent(html_1a68f36dfe54d0b4e46a3b8608d75832);
+            
+        
+
+        circle_marker_76dba9836da976dc98121ad7a903186c.bindPopup(popup_573681f0b240dbf9442a33ba5e435595)
+        ;
+
+        
+    
+    
+            var circle_marker_db339e12675be1857033774a9adefc8a = L.circleMarker(
+                [12.880532168166289, 74.84535464147156],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_81b6f39d9946791b238ab98252a57392 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f5d4fd6d5cef00104608358de736704c = $(`<div id="html_f5d4fd6d5cef00104608358de736704c" style="width: 100.0%; height: 100.0%;">Location: Suralpady<br>Number of Accidents: 5</div>`)[0];
+                popup_81b6f39d9946791b238ab98252a57392.setContent(html_f5d4fd6d5cef00104608358de736704c);
+            
+        
+
+        circle_marker_db339e12675be1857033774a9adefc8a.bindPopup(popup_81b6f39d9946791b238ab98252a57392)
+        ;
+
+        
+    
+    
+            var circle_marker_0aeb99fd19564c9009fd079b8e96e715 = L.circleMarker(
+                [12.875034759867011, 74.85880064058796],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_20b77abd32a6e1b2f73935af0077b005 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ad13e29a9076ed1a596e6b0f200d33f7 = $(`<div id="html_ad13e29a9076ed1a596e6b0f200d33f7" style="width: 100.0%; height: 100.0%;">Location: Yeyyadi<br>Number of Accidents: 8</div>`)[0];
+                popup_20b77abd32a6e1b2f73935af0077b005.setContent(html_ad13e29a9076ed1a596e6b0f200d33f7);
+            
+        
+
+        circle_marker_0aeb99fd19564c9009fd079b8e96e715.bindPopup(popup_20b77abd32a6e1b2f73935af0077b005)
+        ;
+
+        
+    
+    
+            var circle_marker_75efea224ff2b17f19b9abf8d528c574 = L.circleMarker(
+                [12.860320253654498, 74.84376791873042],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.1, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_a8263788ed1bdfe78cb33a3f695faacd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2775a03b981104d5f0b0853ee87b920d = $(`<div id="html_2775a03b981104d5f0b0853ee87b920d" style="width: 100.0%; height: 100.0%;">Location: Bejai<br>Number of Accidents: 1</div>`)[0];
+                popup_a8263788ed1bdfe78cb33a3f695faacd.setContent(html_2775a03b981104d5f0b0853ee87b920d);
+            
+        
+
+        circle_marker_75efea224ff2b17f19b9abf8d528c574.bindPopup(popup_a8263788ed1bdfe78cb33a3f695faacd)
+        ;
+
+        
+    
+    
+            var circle_marker_974aaa45379e1335cc3b30e5aaccc4b3 = L.circleMarker(
+                [12.88668985023873, 74.8496235653025],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.7, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_ab8b24d7e69155d1892e1cb8b6391700 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1bc5cadc287ffca8c895a72e76c61682 = $(`<div id="html_1bc5cadc287ffca8c895a72e76c61682" style="width: 100.0%; height: 100.0%;">Location: Mundkoor<br>Number of Accidents: 7</div>`)[0];
+                popup_ab8b24d7e69155d1892e1cb8b6391700.setContent(html_1bc5cadc287ffca8c895a72e76c61682);
+            
+        
+
+        circle_marker_974aaa45379e1335cc3b30e5aaccc4b3.bindPopup(popup_ab8b24d7e69155d1892e1cb8b6391700)
+        ;
+
+        
+    
+    
+            var circle_marker_dc2135fa6638e855e32f0f5fd0a06d48 = L.circleMarker(
+                [12.889611419041506, 74.82346787178649],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.4, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_73958636e600437510aedba9a96102fc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5c7e23ce69fcf01c4b8dae960de91fba = $(`<div id="html_5c7e23ce69fcf01c4b8dae960de91fba" style="width: 100.0%; height: 100.0%;">Location: Hampankatta<br>Number of Accidents: 4</div>`)[0];
+                popup_73958636e600437510aedba9a96102fc.setContent(html_5c7e23ce69fcf01c4b8dae960de91fba);
+            
+        
+
+        circle_marker_dc2135fa6638e855e32f0f5fd0a06d48.bindPopup(popup_73958636e600437510aedba9a96102fc)
+        ;
+
+        
+    
+    
+            var circle_marker_36f42276c43f4a420551a6119fa52062 = L.circleMarker(
+                [12.882708689439864, 74.84779999639646],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.9, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_3a2f7aeb80812e2633ab80a0dda7f8f4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3c37f4756e3bd80da87e96d625c12a80 = $(`<div id="html_3c37f4756e3bd80da87e96d625c12a80" style="width: 100.0%; height: 100.0%;">Location: Moodushedde<br>Number of Accidents: 9</div>`)[0];
+                popup_3a2f7aeb80812e2633ab80a0dda7f8f4.setContent(html_3c37f4756e3bd80da87e96d625c12a80);
+            
+        
+
+        circle_marker_36f42276c43f4a420551a6119fa52062.bindPopup(popup_3a2f7aeb80812e2633ab80a0dda7f8f4)
+        ;
+
+        
+    
+    
+            var circle_marker_ebbaee4468389d8298c78ae37bf410ef = L.circleMarker(
+                [12.886386638017584, 74.84665353671016],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_21ac960b2aefb37a0f5e847a569c713b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6814c47a8182c974aabe5f859bed672a = $(`<div id="html_6814c47a8182c974aabe5f859bed672a" style="width: 100.0%; height: 100.0%;">Location: Shaktinagar<br>Number of Accidents: 2</div>`)[0];
+                popup_21ac960b2aefb37a0f5e847a569c713b.setContent(html_6814c47a8182c974aabe5f859bed672a);
+            
+        
+
+        circle_marker_ebbaee4468389d8298c78ae37bf410ef.bindPopup(popup_21ac960b2aefb37a0f5e847a569c713b)
+        ;
+
+        
+    
+    
+            var circle_marker_a4425bba74ddc563da23e19a3c843ce0 = L.circleMarker(
+                [12.862705902772774, 74.84543811792126],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.3, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_4cb8d5f7042e90fc1a6bf6b26b24feee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd0df92e1fa8d71643ecfde19a0959cb = $(`<div id="html_bd0df92e1fa8d71643ecfde19a0959cb" style="width: 100.0%; height: 100.0%;">Location: Belthangady<br>Number of Accidents: 3</div>`)[0];
+                popup_4cb8d5f7042e90fc1a6bf6b26b24feee.setContent(html_bd0df92e1fa8d71643ecfde19a0959cb);
+            
+        
+
+        circle_marker_a4425bba74ddc563da23e19a3c843ce0.bindPopup(popup_4cb8d5f7042e90fc1a6bf6b26b24feee)
+        ;
+
+        
+    
+    
+            var circle_marker_b88a5aa44f34c2cfdeeca7a0494fafa5 = L.circleMarker(
+                [12.879493269930403, 74.83804837637291],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.1, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_96e41777f262d11bf8eca8d4e317f22d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d37461f1b74def0e2fb09d1720b6743c = $(`<div id="html_d37461f1b74def0e2fb09d1720b6743c" style="width: 100.0%; height: 100.0%;">Location: Karavali<br>Number of Accidents: 1</div>`)[0];
+                popup_96e41777f262d11bf8eca8d4e317f22d.setContent(html_d37461f1b74def0e2fb09d1720b6743c);
+            
+        
+
+        circle_marker_b88a5aa44f34c2cfdeeca7a0494fafa5.bindPopup(popup_96e41777f262d11bf8eca8d4e317f22d)
+        ;
+
+        
+    
+    
+            var circle_marker_2e1be5763eece356490cd0cc090dbeb8 = L.circleMarker(
+                [12.88625353151872, 74.8372055976134],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.7, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_d2463c83a7efce4b30a11be4f85c883d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_08659e43c6d7ac3e90c318aa851dd568 = $(`<div id="html_08659e43c6d7ac3e90c318aa851dd568" style="width: 100.0%; height: 100.0%;">Location: Car Street<br>Number of Accidents: 7</div>`)[0];
+                popup_d2463c83a7efce4b30a11be4f85c883d.setContent(html_08659e43c6d7ac3e90c318aa851dd568);
+            
+        
+
+        circle_marker_2e1be5763eece356490cd0cc090dbeb8.bindPopup(popup_d2463c83a7efce4b30a11be4f85c883d)
+        ;
+
+        
+    
+    
+            var circle_marker_4eeae77c435ba0da8773f27480902e56 = L.circleMarker(
+                [12.877659357276618, 74.86162066602589],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.7, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_700d91b9ff442649a5d4bb13106669f5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1a7d6ef456e702a858c1c00bd5ecf802 = $(`<div id="html_1a7d6ef456e702a858c1c00bd5ecf802" style="width: 100.0%; height: 100.0%;">Location: Shirva<br>Number of Accidents: 7</div>`)[0];
+                popup_700d91b9ff442649a5d4bb13106669f5.setContent(html_1a7d6ef456e702a858c1c00bd5ecf802);
+            
+        
+
+        circle_marker_4eeae77c435ba0da8773f27480902e56.bindPopup(popup_700d91b9ff442649a5d4bb13106669f5)
+        ;
+
+        
+    
+    
+            var circle_marker_34cdbb328494949d0031c46d9d078884 = L.circleMarker(
+                [12.869185708618108, 74.82385568150445],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_cc2e5e3f322c20e602f78b9daf40f0fc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2719ff87fb09823dcf246cb51b5990c2 = $(`<div id="html_2719ff87fb09823dcf246cb51b5990c2" style="width: 100.0%; height: 100.0%;">Location: Bendore<br>Number of Accidents: 6</div>`)[0];
+                popup_cc2e5e3f322c20e602f78b9daf40f0fc.setContent(html_2719ff87fb09823dcf246cb51b5990c2);
+            
+        
+
+        circle_marker_34cdbb328494949d0031c46d9d078884.bindPopup(popup_cc2e5e3f322c20e602f78b9daf40f0fc)
+        ;
+
+        
+    
+    
+            var circle_marker_6cea42386495bd5b63fe73d22171736b = L.circleMarker(
+                [12.854328048322737, 74.8232654603942],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.1, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_a2f4c121cbf86281129fba72597e4795 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_61f350f532f5dc95228c42518fc51828 = $(`<div id="html_61f350f532f5dc95228c42518fc51828" style="width: 100.0%; height: 100.0%;">Location: Kulai<br>Number of Accidents: 1</div>`)[0];
+                popup_a2f4c121cbf86281129fba72597e4795.setContent(html_61f350f532f5dc95228c42518fc51828);
+            
+        
+
+        circle_marker_6cea42386495bd5b63fe73d22171736b.bindPopup(popup_a2f4c121cbf86281129fba72597e4795)
+        ;
+
+        
+    
+    
+            var circle_marker_cfb37125b737d6cba75565afb6dc57ac = L.circleMarker(
+                [12.867666873418152, 74.86084125120958],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.4, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_d43f2ee0cd6ff2d5e2525337b182b986 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_57505b8912dbc75a41004a1b75487a12 = $(`<div id="html_57505b8912dbc75a41004a1b75487a12" style="width: 100.0%; height: 100.0%;">Location: Gandhinagar<br>Number of Accidents: 4</div>`)[0];
+                popup_d43f2ee0cd6ff2d5e2525337b182b986.setContent(html_57505b8912dbc75a41004a1b75487a12);
+            
+        
+
+        circle_marker_cfb37125b737d6cba75565afb6dc57ac.bindPopup(popup_d43f2ee0cd6ff2d5e2525337b182b986)
+        ;
+
+        
+    
+    
+            var circle_marker_e19c9ebf7d08f49b172fd3ccd4e27817 = L.circleMarker(
+                [12.874735478937753, 74.82979887765589],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.1, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_626370c3a0a4290a2b2f91d254208c34 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_917878e3fb87305ba01dba603aa02ca2 = $(`<div id="html_917878e3fb87305ba01dba603aa02ca2" style="width: 100.0%; height: 100.0%;">Location: Padubidri<br>Number of Accidents: 1</div>`)[0];
+                popup_626370c3a0a4290a2b2f91d254208c34.setContent(html_917878e3fb87305ba01dba603aa02ca2);
+            
+        
+
+        circle_marker_e19c9ebf7d08f49b172fd3ccd4e27817.bindPopup(popup_626370c3a0a4290a2b2f91d254208c34)
+        ;
+
+        
+    
+    
+            var circle_marker_f6aec6f781fbe3e30b3da7458fb1c890 = L.circleMarker(
+                [12.886820442129515, 74.82735580657697],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.1, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_50c0d1871f0894c124e79e97058bffa8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2113396aa3835bd820a4fd6f4ccd5ae2 = $(`<div id="html_2113396aa3835bd820a4fd6f4ccd5ae2" style="width: 100.0%; height: 100.0%;">Location: Katipalla<br>Number of Accidents: 1</div>`)[0];
+                popup_50c0d1871f0894c124e79e97058bffa8.setContent(html_2113396aa3835bd820a4fd6f4ccd5ae2);
+            
+        
+
+        circle_marker_f6aec6f781fbe3e30b3da7458fb1c890.bindPopup(popup_50c0d1871f0894c124e79e97058bffa8)
+        ;
+
+        
+    
+    
+            var circle_marker_c5c8d3bfd7392f684302408dbc526013 = L.circleMarker(
+                [12.88896425471083, 74.83082306039546],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.9, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_295aab9b69785a0f89056cafdf725922 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b7ffaf04a4e493cccc56af3d9c77dc11 = $(`<div id="html_b7ffaf04a4e493cccc56af3d9c77dc11" style="width: 100.0%; height: 100.0%;">Location: Vidyagiri<br>Number of Accidents: 9</div>`)[0];
+                popup_295aab9b69785a0f89056cafdf725922.setContent(html_b7ffaf04a4e493cccc56af3d9c77dc11);
+            
+        
+
+        circle_marker_c5c8d3bfd7392f684302408dbc526013.bindPopup(popup_295aab9b69785a0f89056cafdf725922)
+        ;
+
+        
+    
+    
+            var circle_marker_61e9d1acf26cef5f615e0fab44db3c13 = L.circleMarker(
+                [12.869380391062109, 74.85442986361417],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_293e72d95946a961d655b65428605c93 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_922ca251887148d03b6e0b5ba0c7a1ca = $(`<div id="html_922ca251887148d03b6e0b5ba0c7a1ca" style="width: 100.0%; height: 100.0%;">Location: Kannur<br>Number of Accidents: 10</div>`)[0];
+                popup_293e72d95946a961d655b65428605c93.setContent(html_922ca251887148d03b6e0b5ba0c7a1ca);
+            
+        
+
+        circle_marker_61e9d1acf26cef5f615e0fab44db3c13.bindPopup(popup_293e72d95946a961d655b65428605c93)
+        ;
+
+        
+    
+    
+            var circle_marker_79757037b8718711ecbb8c15e67771d0 = L.circleMarker(
+                [12.884912397110869, 74.85987876634579],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_d764e8b138c2b8bf6e90805c93791ba5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5beb3632c0e1030ee2021fca6e54e086 = $(`<div id="html_5beb3632c0e1030ee2021fca6e54e086" style="width: 100.0%; height: 100.0%;">Location: Attavar<br>Number of Accidents: 2</div>`)[0];
+                popup_d764e8b138c2b8bf6e90805c93791ba5.setContent(html_5beb3632c0e1030ee2021fca6e54e086);
+            
+        
+
+        circle_marker_79757037b8718711ecbb8c15e67771d0.bindPopup(popup_d764e8b138c2b8bf6e90805c93791ba5)
+        ;
+
+        
+    
+    
+            var circle_marker_a19a374ac48c4fe4366782cf135599d0 = L.circleMarker(
+                [12.860719692415678, 74.82331130302674],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.4, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_fe714fa35a242c036e1e970b2a501922 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_37709d24b5e2ed30c7cd7c6ad4541966 = $(`<div id="html_37709d24b5e2ed30c7cd7c6ad4541966" style="width: 100.0%; height: 100.0%;">Location: Kuloor<br>Number of Accidents: 4</div>`)[0];
+                popup_fe714fa35a242c036e1e970b2a501922.setContent(html_37709d24b5e2ed30c7cd7c6ad4541966);
+            
+        
+
+        circle_marker_a19a374ac48c4fe4366782cf135599d0.bindPopup(popup_fe714fa35a242c036e1e970b2a501922)
+        ;
+
+        
+    
+    
+            var circle_marker_f291b83ff325302d26fa55b6adb5b7de = L.circleMarker(
+                [12.88250111308052, 74.83942475327866],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_625f281e3860212b414903fbdaf1079e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac9d822fbe62664d092016b3f79dece1 = $(`<div id="html_ac9d822fbe62664d092016b3f79dece1" style="width: 100.0%; height: 100.0%;">Location: Ullal<br>Number of Accidents: 2</div>`)[0];
+                popup_625f281e3860212b414903fbdaf1079e.setContent(html_ac9d822fbe62664d092016b3f79dece1);
+            
+        
+
+        circle_marker_f291b83ff325302d26fa55b6adb5b7de.bindPopup(popup_625f281e3860212b414903fbdaf1079e)
+        ;
+
+        
+    
+    
+            var circle_marker_0677682bffd555aa6ec59996a2273a6b = L.circleMarker(
+                [12.872247972153424, 74.82646000877496],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_c8a871f123f162dc693dc6d550e2dfa6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fb000f26659643d67ee171152b0702bb = $(`<div id="html_fb000f26659643d67ee171152b0702bb" style="width: 100.0%; height: 100.0%;">Location: Mannagudda<br>Number of Accidents: 10</div>`)[0];
+                popup_c8a871f123f162dc693dc6d550e2dfa6.setContent(html_fb000f26659643d67ee171152b0702bb);
+            
+        
+
+        circle_marker_0677682bffd555aa6ec59996a2273a6b.bindPopup(popup_c8a871f123f162dc693dc6d550e2dfa6)
+        ;
+
+        
+    
+    
+            var circle_marker_aa9ae5b08ddacb5ced202c32ad611bf0 = L.circleMarker(
+                [12.85086166800656, 74.8327967955917],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.4, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_866f9d6cbde7e357880c975a6c855ce5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b900ff88bf85065c1969bdd3f069658d = $(`<div id="html_b900ff88bf85065c1969bdd3f069658d" style="width: 100.0%; height: 100.0%;">Location: Thokottu<br>Number of Accidents: 4</div>`)[0];
+                popup_866f9d6cbde7e357880c975a6c855ce5.setContent(html_b900ff88bf85065c1969bdd3f069658d);
+            
+        
+
+        circle_marker_aa9ae5b08ddacb5ced202c32ad611bf0.bindPopup(popup_866f9d6cbde7e357880c975a6c855ce5)
+        ;
+
+        
+    
+    
+            var circle_marker_8f79dc5e37ed406ac4fae018662d8b92 = L.circleMarker(
+                [12.879088187456158, 74.83123317085266],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_536d31ca61cd1e0504a9312da20eb983 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f167d1729c6af4ba7c155ad551d53b14 = $(`<div id="html_f167d1729c6af4ba7c155ad551d53b14" style="width: 100.0%; height: 100.0%;">Location: Kumpala<br>Number of Accidents: 5</div>`)[0];
+                popup_536d31ca61cd1e0504a9312da20eb983.setContent(html_f167d1729c6af4ba7c155ad551d53b14);
+            
+        
+
+        circle_marker_8f79dc5e37ed406ac4fae018662d8b92.bindPopup(popup_536d31ca61cd1e0504a9312da20eb983)
+        ;
+
+        
+    
+    
+            var circle_marker_e25288b80e4eddb9471254797614cfa3 = L.circleMarker(
+                [12.866252941688971, 74.8482770287934],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_4014a4878a6af80f214f26e2a793addf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_550f9da3822622cb589fe6ec7e7b15c4 = $(`<div id="html_550f9da3822622cb589fe6ec7e7b15c4" style="width: 100.0%; height: 100.0%;">Location: Nellyadi<br>Number of Accidents: 5</div>`)[0];
+                popup_4014a4878a6af80f214f26e2a793addf.setContent(html_550f9da3822622cb589fe6ec7e7b15c4);
+            
+        
+
+        circle_marker_e25288b80e4eddb9471254797614cfa3.bindPopup(popup_4014a4878a6af80f214f26e2a793addf)
+        ;
+
+        
+    
+    
+            var circle_marker_eae815c8434dba4f41ced0cc19b38067 = L.circleMarker(
+                [12.88329379908593, 74.83641175869586],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.3, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_88be69ab997ea882019530f1ed8400e8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_621dcfd0ad7b4d659ab8b5d99d73f613 = $(`<div id="html_621dcfd0ad7b4d659ab8b5d99d73f613" style="width: 100.0%; height: 100.0%;">Location: Kulashekara<br>Number of Accidents: 3</div>`)[0];
+                popup_88be69ab997ea882019530f1ed8400e8.setContent(html_621dcfd0ad7b4d659ab8b5d99d73f613);
+            
+        
+
+        circle_marker_eae815c8434dba4f41ced0cc19b38067.bindPopup(popup_88be69ab997ea882019530f1ed8400e8)
+        ;
+
+        
+    
+    
+            var circle_marker_ede545e56a13dbdb5f2c811305ec325b = L.circleMarker(
+                [12.877026128049277, 74.82961271606119],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_42c7b4e42bed72c7955988b3798940b1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a4049816dfee04cb1adcb67b13cceb4b = $(`<div id="html_a4049816dfee04cb1adcb67b13cceb4b" style="width: 100.0%; height: 100.0%;">Location: Kasargod<br>Number of Accidents: 2</div>`)[0];
+                popup_42c7b4e42bed72c7955988b3798940b1.setContent(html_a4049816dfee04cb1adcb67b13cceb4b);
+            
+        
+
+        circle_marker_ede545e56a13dbdb5f2c811305ec325b.bindPopup(popup_42c7b4e42bed72c7955988b3798940b1)
+        ;
+
+        
+    
+    
+            var circle_marker_a7cdc4b2868698e5e133dd25b0908ff9 = L.circleMarker(
+                [12.850345712772578, 74.8425454602084],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_9e0550852420362a9941fbcbfe0ac514 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a9c3152526adf2deae19c79321a298c = $(`<div id="html_7a9c3152526adf2deae19c79321a298c" style="width: 100.0%; height: 100.0%;">Location: Moodubelle<br>Number of Accidents: 8</div>`)[0];
+                popup_9e0550852420362a9941fbcbfe0ac514.setContent(html_7a9c3152526adf2deae19c79321a298c);
+            
+        
+
+        circle_marker_a7cdc4b2868698e5e133dd25b0908ff9.bindPopup(popup_9e0550852420362a9941fbcbfe0ac514)
+        ;
+
+        
+    
+    
+            var circle_marker_afa79c3947585f5efa31262addaac90b = L.circleMarker(
+                [12.870043114658614, 74.82397514828338],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.7, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_2d04345c74d5d23fca54e2ae0945eea2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a4f34c9ca5e9556252ba35baaef2137 = $(`<div id="html_0a4f34c9ca5e9556252ba35baaef2137" style="width: 100.0%; height: 100.0%;">Location: Kanthavara<br>Number of Accidents: 7</div>`)[0];
+                popup_2d04345c74d5d23fca54e2ae0945eea2.setContent(html_0a4f34c9ca5e9556252ba35baaef2137);
+            
+        
+
+        circle_marker_afa79c3947585f5efa31262addaac90b.bindPopup(popup_2d04345c74d5d23fca54e2ae0945eea2)
+        ;
+
+        
+    
+    
+            var circle_marker_44721325c5a861e6bf56dd40f3240eab = L.circleMarker(
+                [12.885004111019713, 74.82643684964755],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_b2cff4e27e6889033d8283971c6590cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3e3ff8dda07bb735198a482f89485b3e = $(`<div id="html_3e3ff8dda07bb735198a482f89485b3e" style="width: 100.0%; height: 100.0%;">Location: Hoige Bazaar<br>Number of Accidents: 2</div>`)[0];
+                popup_b2cff4e27e6889033d8283971c6590cb.setContent(html_3e3ff8dda07bb735198a482f89485b3e);
+            
+        
+
+        circle_marker_44721325c5a861e6bf56dd40f3240eab.bindPopup(popup_b2cff4e27e6889033d8283971c6590cb)
+        ;
+
+        
+    
+    
+            var circle_marker_052ab744f8d2b181e7edec3cf963cb5a = L.circleMarker(
+                [12.860056435075483, 74.8619294059489],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.1, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_47cdb47f390a639835994eb83f7a1175 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a395129b7b45d0eb8c7510e808832629 = $(`<div id="html_a395129b7b45d0eb8c7510e808832629" style="width: 100.0%; height: 100.0%;">Location: Kavoor<br>Number of Accidents: 1</div>`)[0];
+                popup_47cdb47f390a639835994eb83f7a1175.setContent(html_a395129b7b45d0eb8c7510e808832629);
+            
+        
+
+        circle_marker_052ab744f8d2b181e7edec3cf963cb5a.bindPopup(popup_47cdb47f390a639835994eb83f7a1175)
+        ;
+
+        
+    
+    
+            var circle_marker_cacb06e5b6645fd3db0936d033966064 = L.circleMarker(
+                [12.863308174509896, 74.83037423161868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_9c0970c9c05ed181f3bb8d52d0b0f493 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9d328ae530ef33a7fbbc72dad7ab8e37 = $(`<div id="html_9d328ae530ef33a7fbbc72dad7ab8e37" style="width: 100.0%; height: 100.0%;">Location: Belman<br>Number of Accidents: 5</div>`)[0];
+                popup_9c0970c9c05ed181f3bb8d52d0b0f493.setContent(html_9d328ae530ef33a7fbbc72dad7ab8e37);
+            
+        
+
+        circle_marker_cacb06e5b6645fd3db0936d033966064.bindPopup(popup_9c0970c9c05ed181f3bb8d52d0b0f493)
+        ;
+
+        
+    
+    
+            var circle_marker_346b78bf15f30fe2a6e37552a099beae = L.circleMarker(
+                [12.885118849284346, 74.83674221205246],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_23bf1cf0a5c76add695eaa6e31b9a794 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_200bbf0e411ec02204a60ada938aed84 = $(`<div id="html_200bbf0e411ec02204a60ada938aed84" style="width: 100.0%; height: 100.0%;">Location: Kanhangad<br>Number of Accidents: 8</div>`)[0];
+                popup_23bf1cf0a5c76add695eaa6e31b9a794.setContent(html_200bbf0e411ec02204a60ada938aed84);
+            
+        
+
+        circle_marker_346b78bf15f30fe2a6e37552a099beae.bindPopup(popup_23bf1cf0a5c76add695eaa6e31b9a794)
+        ;
+
+        
+    
+    
+            var circle_marker_9b751209da37646c88488e913ede01ca = L.circleMarker(
+                [12.857942683660095, 74.85166393224901],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_3ae5077d20fdfc676c2b8e381ecf44a5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_71c82873d158ba3cc6141fa730ba9f15 = $(`<div id="html_71c82873d158ba3cc6141fa730ba9f15" style="width: 100.0%; height: 100.0%;">Location: Chokkabettu<br>Number of Accidents: 2</div>`)[0];
+                popup_3ae5077d20fdfc676c2b8e381ecf44a5.setContent(html_71c82873d158ba3cc6141fa730ba9f15);
+            
+        
+
+        circle_marker_9b751209da37646c88488e913ede01ca.bindPopup(popup_3ae5077d20fdfc676c2b8e381ecf44a5)
+        ;
+
+        
+    
+    
+            var circle_marker_c93c9fbafba1b1a29100a96aa5e0cfa8 = L.circleMarker(
+                [12.873000429624827, 74.85593306260773],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_0bda8119a35bd93a6210960e75cd81ae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d65d66cd0e24d975e2638c887bec25ed = $(`<div id="html_d65d66cd0e24d975e2638c887bec25ed" style="width: 100.0%; height: 100.0%;">Location: Padil<br>Number of Accidents: 5</div>`)[0];
+                popup_0bda8119a35bd93a6210960e75cd81ae.setContent(html_d65d66cd0e24d975e2638c887bec25ed);
+            
+        
+
+        circle_marker_c93c9fbafba1b1a29100a96aa5e0cfa8.bindPopup(popup_0bda8119a35bd93a6210960e75cd81ae)
+        ;
+
+        
+    
+    
+            var circle_marker_9a134b6413ff805337c8a811164e8d7c = L.circleMarker(
+                [12.85984463714461, 74.85913928247982],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.3, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_f69dacb123a0929a2247d0504dec4c89 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e9d7a307e9efa9e5b40030bfef9ad252 = $(`<div id="html_e9d7a307e9efa9e5b40030bfef9ad252" style="width: 100.0%; height: 100.0%;">Location: Bondel<br>Number of Accidents: 3</div>`)[0];
+                popup_f69dacb123a0929a2247d0504dec4c89.setContent(html_e9d7a307e9efa9e5b40030bfef9ad252);
+            
+        
+
+        circle_marker_9a134b6413ff805337c8a811164e8d7c.bindPopup(popup_f69dacb123a0929a2247d0504dec4c89)
+        ;
+
+        
+    
+    
+            var circle_marker_ce171b03395ac4238f9e32b6afc95ffa = L.circleMarker(
+                [12.889001610011606, 74.8291769842439],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.9, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_188099c514229cf1b3206979c1879294 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_14d634f876b7a7d354d9dfcba4a191aa = $(`<div id="html_14d634f876b7a7d354d9dfcba4a191aa" style="width: 100.0%; height: 100.0%;">Location: Ashoknagar<br>Number of Accidents: 9</div>`)[0];
+                popup_188099c514229cf1b3206979c1879294.setContent(html_14d634f876b7a7d354d9dfcba4a191aa);
+            
+        
+
+        circle_marker_ce171b03395ac4238f9e32b6afc95ffa.bindPopup(popup_188099c514229cf1b3206979c1879294)
+        ;
+
+        
+    
+    
+            var circle_marker_5f2b31474328cee158d148c3970625bb = L.circleMarker(
+                [12.882427178771197, 74.84930562254291],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_05882b5e202a07f85feeffdcc6491ad1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_08cf8189db332c2d42cd4db26df9f6f7 = $(`<div id="html_08cf8189db332c2d42cd4db26df9f6f7" style="width: 100.0%; height: 100.0%;">Location: Mudipu<br>Number of Accidents: 6</div>`)[0];
+                popup_05882b5e202a07f85feeffdcc6491ad1.setContent(html_08cf8189db332c2d42cd4db26df9f6f7);
+            
+        
+
+        circle_marker_5f2b31474328cee158d148c3970625bb.bindPopup(popup_05882b5e202a07f85feeffdcc6491ad1)
+        ;
+
+        
+    
+    
+            var circle_marker_f157f7764e1817857cc9d65077bd2bc1 = L.circleMarker(
+                [12.868218782857424, 74.86106195612173],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_47c578b0bf8edf0293330c1042c60f69 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_73496567e32a16c2c62aa9cc1adc8e72 = $(`<div id="html_73496567e32a16c2c62aa9cc1adc8e72" style="width: 100.0%; height: 100.0%;">Location: Maryhill<br>Number of Accidents: 2</div>`)[0];
+                popup_47c578b0bf8edf0293330c1042c60f69.setContent(html_73496567e32a16c2c62aa9cc1adc8e72);
+            
+        
+
+        circle_marker_f157f7764e1817857cc9d65077bd2bc1.bindPopup(popup_47c578b0bf8edf0293330c1042c60f69)
+        ;
+
+        
+    
+    
+            var circle_marker_de122ac51828add24dbb517f913013a8 = L.circleMarker(
+                [12.8535178327421, 74.82472203775306],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.3, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_2ce6bbae4f28a5d60d6f10228f03d453 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_56932ae222188a2d60457b34d0c71eea = $(`<div id="html_56932ae222188a2d60457b34d0c71eea" style="width: 100.0%; height: 100.0%;">Location: Shirva<br>Number of Accidents: 3</div>`)[0];
+                popup_2ce6bbae4f28a5d60d6f10228f03d453.setContent(html_56932ae222188a2d60457b34d0c71eea);
+            
+        
+
+        circle_marker_de122ac51828add24dbb517f913013a8.bindPopup(popup_2ce6bbae4f28a5d60d6f10228f03d453)
+        ;
+
+        
+    
+    
+            var circle_marker_9c03764404a038db7bd13fe73c7caae8 = L.circleMarker(
+                [12.863102184186902, 74.84944807137197],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_0485f0620eb57f1c983ddc14af9340d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cb6a40fac32fb5b1b19ae8500e45ea5f = $(`<div id="html_cb6a40fac32fb5b1b19ae8500e45ea5f" style="width: 100.0%; height: 100.0%;">Location: Bellare<br>Number of Accidents: 5</div>`)[0];
+                popup_0485f0620eb57f1c983ddc14af9340d6.setContent(html_cb6a40fac32fb5b1b19ae8500e45ea5f);
+            
+        
+
+        circle_marker_9c03764404a038db7bd13fe73c7caae8.bindPopup(popup_0485f0620eb57f1c983ddc14af9340d6)
+        ;
+
+        
+    
+    
+            var circle_marker_931f45f2b22813e5ff9253a9c8d2147b = L.circleMarker(
+                [12.870617625700824, 74.85621698374807],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.1, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_f4f84124f7c8bd3ea5ae3cfd9a1bc9d9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9b2d607b7776164b877fa7e231b109da = $(`<div id="html_9b2d607b7776164b877fa7e231b109da" style="width: 100.0%; height: 100.0%;">Location: Adyar<br>Number of Accidents: 1</div>`)[0];
+                popup_f4f84124f7c8bd3ea5ae3cfd9a1bc9d9.setContent(html_9b2d607b7776164b877fa7e231b109da);
+            
+        
+
+        circle_marker_931f45f2b22813e5ff9253a9c8d2147b.bindPopup(popup_f4f84124f7c8bd3ea5ae3cfd9a1bc9d9)
+        ;
+
+        
+    
+    
+            var circle_marker_0e0d1deb36238922fb436089c45425f4 = L.circleMarker(
+                [12.887613352969076, 74.83609250164314],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.1, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_1cf06cebb1fc3c316636e6af2e2fa5d4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_72dab231b95e456ef82bb63c29fa7a0a = $(`<div id="html_72dab231b95e456ef82bb63c29fa7a0a" style="width: 100.0%; height: 100.0%;">Location: Deralakatte<br>Number of Accidents: 1</div>`)[0];
+                popup_1cf06cebb1fc3c316636e6af2e2fa5d4.setContent(html_72dab231b95e456ef82bb63c29fa7a0a);
+            
+        
+
+        circle_marker_0e0d1deb36238922fb436089c45425f4.bindPopup(popup_1cf06cebb1fc3c316636e6af2e2fa5d4)
+        ;
+
+        
+    
+    
+            var circle_marker_71b2db9f4562dc055203c366d0239a6c = L.circleMarker(
+                [12.854662313837244, 74.8324274935714],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.1, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_72bc742cfe4dd0dfb7e1bef428064450 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_97ba900298acc3d55c289f697b2ef0dc = $(`<div id="html_97ba900298acc3d55c289f697b2ef0dc" style="width: 100.0%; height: 100.0%;">Location: Vamanjoor<br>Number of Accidents: 1</div>`)[0];
+                popup_72bc742cfe4dd0dfb7e1bef428064450.setContent(html_97ba900298acc3d55c289f697b2ef0dc);
+            
+        
+
+        circle_marker_71b2db9f4562dc055203c366d0239a6c.bindPopup(popup_72bc742cfe4dd0dfb7e1bef428064450)
+        ;
+
+        
+    
+    
+            var circle_marker_c563c981ce569c3e2473255e296402dc = L.circleMarker(
+                [12.872350689843625, 74.84627165573878],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.4, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_af5ea7d532011ddd654c315ba0bea358 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f2cf122af60ea1f215057aff8c92bd93 = $(`<div id="html_f2cf122af60ea1f215057aff8c92bd93" style="width: 100.0%; height: 100.0%;">Location: Pace<br>Number of Accidents: 4</div>`)[0];
+                popup_af5ea7d532011ddd654c315ba0bea358.setContent(html_f2cf122af60ea1f215057aff8c92bd93);
+            
+        
+
+        circle_marker_c563c981ce569c3e2473255e296402dc.bindPopup(popup_af5ea7d532011ddd654c315ba0bea358)
+        ;
+
+        
+    
+    
+            var circle_marker_c0c63ec029274cc09774d11b58c84cc2 = L.circleMarker(
+                [12.878562456394675, 74.84009256134796],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_635ae37afdc26e7ed794b7353e928d45 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1dd3bc9fdd9e10ccce58cfddee225da6 = $(`<div id="html_1dd3bc9fdd9e10ccce58cfddee225da6" style="width: 100.0%; height: 100.0%;">Location: Kottara<br>Number of Accidents: 5</div>`)[0];
+                popup_635ae37afdc26e7ed794b7353e928d45.setContent(html_1dd3bc9fdd9e10ccce58cfddee225da6);
+            
+        
+
+        circle_marker_c0c63ec029274cc09774d11b58c84cc2.bindPopup(popup_635ae37afdc26e7ed794b7353e928d45)
+        ;
+
+        
+    
+    
+            var circle_marker_eba0f74a227c7de24eb750f43d065ccd = L.circleMarker(
+                [12.872197636453135, 74.82939277937805],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.9, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_148938a1b131a56f29f941d2a2f3800d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6fcca17802bba3a7ab459da71a98decd = $(`<div id="html_6fcca17802bba3a7ab459da71a98decd" style="width: 100.0%; height: 100.0%;">Location: Derlakatte<br>Number of Accidents: 9</div>`)[0];
+                popup_148938a1b131a56f29f941d2a2f3800d.setContent(html_6fcca17802bba3a7ab459da71a98decd);
+            
+        
+
+        circle_marker_eba0f74a227c7de24eb750f43d065ccd.bindPopup(popup_148938a1b131a56f29f941d2a2f3800d)
+        ;
+
+        
+    
+    
+            var circle_marker_c2d9e8a60aecab288a73b6e143bf9edf = L.circleMarker(
+                [12.882878674531652, 74.84126501660386],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_3ef9a9e9884cff3a81ffd54aa932f98c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_da10ea0025009d9ff3c9e52c4605dddd = $(`<div id="html_da10ea0025009d9ff3c9e52c4605dddd" style="width: 100.0%; height: 100.0%;">Location: Konaje<br>Number of Accidents: 6</div>`)[0];
+                popup_3ef9a9e9884cff3a81ffd54aa932f98c.setContent(html_da10ea0025009d9ff3c9e52c4605dddd);
+            
+        
+
+        circle_marker_c2d9e8a60aecab288a73b6e143bf9edf.bindPopup(popup_3ef9a9e9884cff3a81ffd54aa932f98c)
+        ;
+
+        
+    
+    
+            var circle_marker_8ef19ae07a6c83a26349dadbca32e0f5 = L.circleMarker(
+                [12.871911344278812, 74.8387962158263],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_63deb3626ef19f02edf4ab35b31363da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f6bf32f5b1f1f970a227bf38b5b20b11 = $(`<div id="html_f6bf32f5b1f1f970a227bf38b5b20b11" style="width: 100.0%; height: 100.0%;">Location: Kaup<br>Number of Accidents: 6</div>`)[0];
+                popup_63deb3626ef19f02edf4ab35b31363da.setContent(html_f6bf32f5b1f1f970a227bf38b5b20b11);
+            
+        
+
+        circle_marker_8ef19ae07a6c83a26349dadbca32e0f5.bindPopup(popup_63deb3626ef19f02edf4ab35b31363da)
+        ;
+
+        
+    
+    
+            var circle_marker_4624926905da60f827c7d694e0d9ad92 = L.circleMarker(
+                [12.888853541838952, 74.84516450958097],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_fe6a6fe5155b073815942ed474455091 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3d916c736a05bdff21e5b953642c258a = $(`<div id="html_3d916c736a05bdff21e5b953642c258a" style="width: 100.0%; height: 100.0%;">Location: Kadri<br>Number of Accidents: 10</div>`)[0];
+                popup_fe6a6fe5155b073815942ed474455091.setContent(html_3d916c736a05bdff21e5b953642c258a);
+            
+        
+
+        circle_marker_4624926905da60f827c7d694e0d9ad92.bindPopup(popup_fe6a6fe5155b073815942ed474455091)
+        ;
+
+        
+    
+    
+            var circle_marker_a8612d05080147e9204a3a405dc42ef8 = L.circleMarker(
+                [12.874427425118457, 74.8427440052025],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.1, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_41ea1a8e7ae45c5932a8cc88734ab015 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8e40b2e03bc2ed74ee44457a46288a35 = $(`<div id="html_8e40b2e03bc2ed74ee44457a46288a35" style="width: 100.0%; height: 100.0%;">Location: Puttur<br>Number of Accidents: 1</div>`)[0];
+                popup_41ea1a8e7ae45c5932a8cc88734ab015.setContent(html_8e40b2e03bc2ed74ee44457a46288a35);
+            
+        
+
+        circle_marker_a8612d05080147e9204a3a405dc42ef8.bindPopup(popup_41ea1a8e7ae45c5932a8cc88734ab015)
+        ;
+
+        
+    
+    
+            var circle_marker_af9d5a9d75a4c75e0ef5e1d64e84cc19 = L.circleMarker(
+                [12.873804682567018, 74.83485784004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_0716899508edfa521a5dd019f5a08143 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_54ec7a34359f8723a8234651fd359dbd = $(`<div id="html_54ec7a34359f8723a8234651fd359dbd" style="width: 100.0%; height: 100.0%;">Location: Madaka<br>Number of Accidents: 10</div>`)[0];
+                popup_0716899508edfa521a5dd019f5a08143.setContent(html_54ec7a34359f8723a8234651fd359dbd);
+            
+        
+
+        circle_marker_af9d5a9d75a4c75e0ef5e1d64e84cc19.bindPopup(popup_0716899508edfa521a5dd019f5a08143)
+        ;
+
+        
+    
+    
+            var circle_marker_91772bb786e959e3938a6cc8ccdaed44 = L.circleMarker(
+                [12.868099561051022, 74.8366860673036],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_484b90e3186f8246ef6e3393998ce3dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dc06123757b93ac10f3d3742f7fde40f = $(`<div id="html_dc06123757b93ac10f3d3742f7fde40f" style="width: 100.0%; height: 100.0%;">Location: Subrahmanya<br>Number of Accidents: 8</div>`)[0];
+                popup_484b90e3186f8246ef6e3393998ce3dc.setContent(html_dc06123757b93ac10f3d3742f7fde40f);
+            
+        
+
+        circle_marker_91772bb786e959e3938a6cc8ccdaed44.bindPopup(popup_484b90e3186f8246ef6e3393998ce3dc)
+        ;
+
+        
+    
+    
+            var circle_marker_9dc684a4c79cfd12e7c7298242bb99f8 = L.circleMarker(
+                [12.874151474463323, 74.85590644697476],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_3e1f334e42f4cb9fd5fdd936e48d6b63 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e1c6a74a97033a209e97df9f43e8f6c8 = $(`<div id="html_e1c6a74a97033a209e97df9f43e8f6c8" style="width: 100.0%; height: 100.0%;">Location: Kotekar<br>Number of Accidents: 8</div>`)[0];
+                popup_3e1f334e42f4cb9fd5fdd936e48d6b63.setContent(html_e1c6a74a97033a209e97df9f43e8f6c8);
+            
+        
+
+        circle_marker_9dc684a4c79cfd12e7c7298242bb99f8.bindPopup(popup_3e1f334e42f4cb9fd5fdd936e48d6b63)
+        ;
+
+        
+    
+    
+            var circle_marker_bb66a8602729e6b35cdd04ff01eb3e4f = L.circleMarker(
+                [12.865696045838908, 74.83243730659288],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.7, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_bfd2d6ba8e8710b96757e94dc834b20c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b0cb9edb2637cc811f7a9a4b069da7d6 = $(`<div id="html_b0cb9edb2637cc811f7a9a4b069da7d6" style="width: 100.0%; height: 100.0%;">Location: Uppinangady<br>Number of Accidents: 7</div>`)[0];
+                popup_bfd2d6ba8e8710b96757e94dc834b20c.setContent(html_b0cb9edb2637cc811f7a9a4b069da7d6);
+            
+        
+
+        circle_marker_bb66a8602729e6b35cdd04ff01eb3e4f.bindPopup(popup_bfd2d6ba8e8710b96757e94dc834b20c)
+        ;
+
+        
+    
+    
+            var circle_marker_dc3df457c028615db9a859737d64aa35 = L.circleMarker(
+                [12.873326040566596, 74.84482400875414],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_4a6a6d67f9f39da30aad3344b20843a8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e855646c64e2de1bcc82e33fdf80c253 = $(`<div id="html_e855646c64e2de1bcc82e33fdf80c253" style="width: 100.0%; height: 100.0%;">Location: Panjimogaru<br>Number of Accidents: 6</div>`)[0];
+                popup_4a6a6d67f9f39da30aad3344b20843a8.setContent(html_e855646c64e2de1bcc82e33fdf80c253);
+            
+        
+
+        circle_marker_dc3df457c028615db9a859737d64aa35.bindPopup(popup_4a6a6d67f9f39da30aad3344b20843a8)
+        ;
+
+        
+    
+    
+            var circle_marker_c58bf657f107de5217a7931204bf1041 = L.circleMarker(
+                [12.86191318009611, 74.82289745275317],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.9, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_e88c2056270084684e9d284bd21039d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_54a98c7d10725df371adbf3a6cfd6192 = $(`<div id="html_54a98c7d10725df371adbf3a6cfd6192" style="width: 100.0%; height: 100.0%;">Location: Alape<br>Number of Accidents: 9</div>`)[0];
+                popup_e88c2056270084684e9d284bd21039d6.setContent(html_54a98c7d10725df371adbf3a6cfd6192);
+            
+        
+
+        circle_marker_c58bf657f107de5217a7931204bf1041.bindPopup(popup_e88c2056270084684e9d284bd21039d6)
+        ;
+
+        
+    
+    
+            var circle_marker_04ac01dfed986ae6add941d7c63871e5 = L.circleMarker(
+                [12.857875653142177, 74.85206297509643],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.3, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_ee55babffc2c19c279afaf2c2fbc30e6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cf5b20899c013fe66b9b6258afff43fb = $(`<div id="html_cf5b20899c013fe66b9b6258afff43fb" style="width: 100.0%; height: 100.0%;">Location: Kateel<br>Number of Accidents: 3</div>`)[0];
+                popup_ee55babffc2c19c279afaf2c2fbc30e6.setContent(html_cf5b20899c013fe66b9b6258afff43fb);
+            
+        
+
+        circle_marker_04ac01dfed986ae6add941d7c63871e5.bindPopup(popup_ee55babffc2c19c279afaf2c2fbc30e6)
+        ;
+
+        
+    
+    
+            var circle_marker_d81a5b58a043ed9cb32cf6ba488f8028 = L.circleMarker(
+                [12.857769181130225, 74.83583666217893],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.4, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_30b1054a946fdbcb8d627d54732accdd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_64ea709a693b7de0a6f10c7725b9efca = $(`<div id="html_64ea709a693b7de0a6f10c7725b9efca" style="width: 100.0%; height: 100.0%;">Location: Shibaje<br>Number of Accidents: 4</div>`)[0];
+                popup_30b1054a946fdbcb8d627d54732accdd.setContent(html_64ea709a693b7de0a6f10c7725b9efca);
+            
+        
+
+        circle_marker_d81a5b58a043ed9cb32cf6ba488f8028.bindPopup(popup_30b1054a946fdbcb8d627d54732accdd)
+        ;
+
+        
+    
+    
+            var circle_marker_cc170610289119e666c17425ca698c14 = L.circleMarker(
+                [12.874810927194744, 74.82422785974273],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.7, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_075dab9beeb0273f0e8c60f0ead51e17 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_33131d305708c96c0d78c6c99a7abcb1 = $(`<div id="html_33131d305708c96c0d78c6c99a7abcb1" style="width: 100.0%; height: 100.0%;">Location: Pandeshwar<br>Number of Accidents: 7</div>`)[0];
+                popup_075dab9beeb0273f0e8c60f0ead51e17.setContent(html_33131d305708c96c0d78c6c99a7abcb1);
+            
+        
+
+        circle_marker_cc170610289119e666c17425ca698c14.bindPopup(popup_075dab9beeb0273f0e8c60f0ead51e17)
+        ;
+
+        
+    
+    
+            var circle_marker_b5b67aadf4ab256f749bc48171044ed4 = L.circleMarker(
+                [12.876566375559586, 74.83363532656873],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_1001ab3669441ffd616ff3f108574208 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b0f3d2fdb06819d9867858fb69be2fb8 = $(`<div id="html_b0f3d2fdb06819d9867858fb69be2fb8" style="width: 100.0%; height: 100.0%;">Location: Shirva<br>Number of Accidents: 10</div>`)[0];
+                popup_1001ab3669441ffd616ff3f108574208.setContent(html_b0f3d2fdb06819d9867858fb69be2fb8);
+            
+        
+
+        circle_marker_b5b67aadf4ab256f749bc48171044ed4.bindPopup(popup_1001ab3669441ffd616ff3f108574208)
+        ;
+
+        
+    
+    
+            var circle_marker_ab40048c2ab1d7ff084b1c795bf776f7 = L.circleMarker(
+                [12.869361239680376, 74.83200521631305],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_749a0a7c38d6a7aaad710c9fa7fa5785 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3453cd240ade8cb921e250d9182906b0 = $(`<div id="html_3453cd240ade8cb921e250d9182906b0" style="width: 100.0%; height: 100.0%;">Location: Kunjathbail<br>Number of Accidents: 5</div>`)[0];
+                popup_749a0a7c38d6a7aaad710c9fa7fa5785.setContent(html_3453cd240ade8cb921e250d9182906b0);
+            
+        
+
+        circle_marker_ab40048c2ab1d7ff084b1c795bf776f7.bindPopup(popup_749a0a7c38d6a7aaad710c9fa7fa5785)
+        ;
+
+        
+    
+    
+            var circle_marker_9650146de832b2c33190718c826d61ad = L.circleMarker(
+                [12.853892974447824, 74.8605251735931],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.1, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_5ea2abfce36e9e45a7acd1f2c0e53480 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aa20f3a2037a396649254de89e930273 = $(`<div id="html_aa20f3a2037a396649254de89e930273" style="width: 100.0%; height: 100.0%;">Location: Nantur<br>Number of Accidents: 1</div>`)[0];
+                popup_5ea2abfce36e9e45a7acd1f2c0e53480.setContent(html_aa20f3a2037a396649254de89e930273);
+            
+        
+
+        circle_marker_9650146de832b2c33190718c826d61ad.bindPopup(popup_5ea2abfce36e9e45a7acd1f2c0e53480)
+        ;
+
+        
+    
+    
+            var circle_marker_b5779cad94ba8538e3fa68ef220e8ef6 = L.circleMarker(
+                [12.880604156878658, 74.83648902246061],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.3, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_ed20661c852d13cb4ccad863f0e92232 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac20d7dc3a885384158113d84a3dd811 = $(`<div id="html_ac20d7dc3a885384158113d84a3dd811" style="width: 100.0%; height: 100.0%;">Location: Mulki<br>Number of Accidents: 3</div>`)[0];
+                popup_ed20661c852d13cb4ccad863f0e92232.setContent(html_ac20d7dc3a885384158113d84a3dd811);
+            
+        
+
+        circle_marker_b5779cad94ba8538e3fa68ef220e8ef6.bindPopup(popup_ed20661c852d13cb4ccad863f0e92232)
+        ;
+
+        
+    
+    
+            var circle_marker_df6b0d07e08e1806fb2c8c7add115d8c = L.circleMarker(
+                [12.88537081483291, 74.83391511659426],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.3, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_289c50f76e98426d7a1e4ce72846be73 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_da8d90c57df02ba156352aa2b6c4be89 = $(`<div id="html_da8d90c57df02ba156352aa2b6c4be89" style="width: 100.0%; height: 100.0%;">Location: Pumpwell<br>Number of Accidents: 3</div>`)[0];
+                popup_289c50f76e98426d7a1e4ce72846be73.setContent(html_da8d90c57df02ba156352aa2b6c4be89);
+            
+        
+
+        circle_marker_df6b0d07e08e1806fb2c8c7add115d8c.bindPopup(popup_289c50f76e98426d7a1e4ce72846be73)
+        ;
+
+        
+    
+    
+            var circle_marker_db8a82c132398e156ba99f5467ff7f17 = L.circleMarker(
+                [12.887235240637851, 74.83676804789015],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_1673d7f1f5ee01b74153770560fcde04 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d37782c9b0603ba8ba42f07ceb317754 = $(`<div id="html_d37782c9b0603ba8ba42f07ceb317754" style="width: 100.0%; height: 100.0%;">Location: Uchila<br>Number of Accidents: 5</div>`)[0];
+                popup_1673d7f1f5ee01b74153770560fcde04.setContent(html_d37782c9b0603ba8ba42f07ceb317754);
+            
+        
+
+        circle_marker_db8a82c132398e156ba99f5467ff7f17.bindPopup(popup_1673d7f1f5ee01b74153770560fcde04)
+        ;
+
+        
+    
+    
+            var circle_marker_f7765c314989800920a1fcbeb7beac02 = L.circleMarker(
+                [12.883998408925608, 74.86027623342632],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_f08502d91b1f8cb2bd9f65ca78a5cf68 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4877f190cafae82938de1fad32e057b0 = $(`<div id="html_4877f190cafae82938de1fad32e057b0" style="width: 100.0%; height: 100.0%;">Location: Kodialbail<br>Number of Accidents: 6</div>`)[0];
+                popup_f08502d91b1f8cb2bd9f65ca78a5cf68.setContent(html_4877f190cafae82938de1fad32e057b0);
+            
+        
+
+        circle_marker_f7765c314989800920a1fcbeb7beac02.bindPopup(popup_f08502d91b1f8cb2bd9f65ca78a5cf68)
+        ;
+
+        
+    
+    
+            var circle_marker_7e0d0fcb49c3c9271466caddc0841098 = L.circleMarker(
+                [12.886226924854316, 74.84774991408997],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_e4a115b26093acb53f0650e854789f91 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c6b19254c494a2cfe2fb916282a3cbc9 = $(`<div id="html_c6b19254c494a2cfe2fb916282a3cbc9" style="width: 100.0%; height: 100.0%;">Location: Naravi<br>Number of Accidents: 6</div>`)[0];
+                popup_e4a115b26093acb53f0650e854789f91.setContent(html_c6b19254c494a2cfe2fb916282a3cbc9);
+            
+        
+
+        circle_marker_7e0d0fcb49c3c9271466caddc0841098.bindPopup(popup_e4a115b26093acb53f0650e854789f91)
+        ;
+
+        
+    
+    
+            var circle_marker_56ff32527fa534ac7f122c68699998da = L.circleMarker(
+                [12.887223297592808, 74.84724307382474],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_732c5a8212ef7cc1e41eaea904611673 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_99a37346f31a8c3124fd7b8c0bd15673 = $(`<div id="html_99a37346f31a8c3124fd7b8c0bd15673" style="width: 100.0%; height: 100.0%;">Location: Bajal<br>Number of Accidents: 6</div>`)[0];
+                popup_732c5a8212ef7cc1e41eaea904611673.setContent(html_99a37346f31a8c3124fd7b8c0bd15673);
+            
+        
+
+        circle_marker_56ff32527fa534ac7f122c68699998da.bindPopup(popup_732c5a8212ef7cc1e41eaea904611673)
+        ;
+
+        
+    
+    
+            var circle_marker_f06f71659e1da9141d7a54ee20047aa9 = L.circleMarker(
+                [12.871923996997923, 74.85102477401206],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_2e667dbffc1c630dcbb13abfab5bfaf3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_05110361efe4008492cf461f1672a2df = $(`<div id="html_05110361efe4008492cf461f1672a2df" style="width: 100.0%; height: 100.0%;">Location: Mundoor<br>Number of Accidents: 2</div>`)[0];
+                popup_2e667dbffc1c630dcbb13abfab5bfaf3.setContent(html_05110361efe4008492cf461f1672a2df);
+            
+        
+
+        circle_marker_f06f71659e1da9141d7a54ee20047aa9.bindPopup(popup_2e667dbffc1c630dcbb13abfab5bfaf3)
+        ;
+
+        
+    
+    
+            var circle_marker_b880f70fe613c3b8e0ac9f362cf457c0 = L.circleMarker(
+                [12.865951842009386, 74.8379206894125],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_f46f1a52c758979b86ca3296b1945230 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dedd10cea87415b2b03a729f43cdf4ed = $(`<div id="html_dedd10cea87415b2b03a729f43cdf4ed" style="width: 100.0%; height: 100.0%;">Location: Kinnigoli<br>Number of Accidents: 6</div>`)[0];
+                popup_f46f1a52c758979b86ca3296b1945230.setContent(html_dedd10cea87415b2b03a729f43cdf4ed);
+            
+        
+
+        circle_marker_b880f70fe613c3b8e0ac9f362cf457c0.bindPopup(popup_f46f1a52c758979b86ca3296b1945230)
+        ;
+
+        
+    
+    
+            var circle_marker_7883a939d74377acea96747f1447068a = L.circleMarker(
+                [12.878511335994176, 74.83897671953109],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_8bdfc7824c0beec296c841a05d91768c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e2b4f1166b4566ed0a4f104f46685e0 = $(`<div id="html_7e2b4f1166b4566ed0a4f104f46685e0" style="width: 100.0%; height: 100.0%;">Location: Badyar<br>Number of Accidents: 10</div>`)[0];
+                popup_8bdfc7824c0beec296c841a05d91768c.setContent(html_7e2b4f1166b4566ed0a4f104f46685e0);
+            
+        
+
+        circle_marker_7883a939d74377acea96747f1447068a.bindPopup(popup_8bdfc7824c0beec296c841a05d91768c)
+        ;
+
+        
+    
+    
+            var circle_marker_59e06978f977cd9802f9794584f62ec6 = L.circleMarker(
+                [12.861325364852483, 74.84843331449053],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.1, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_cbea2849f35953cd44b90c3ef65fde7d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c7b6827b1c1eefb563c03f4abb9345dc = $(`<div id="html_c7b6827b1c1eefb563c03f4abb9345dc" style="width: 100.0%; height: 100.0%;">Location: Yermal<br>Number of Accidents: 1</div>`)[0];
+                popup_cbea2849f35953cd44b90c3ef65fde7d.setContent(html_c7b6827b1c1eefb563c03f4abb9345dc);
+            
+        
+
+        circle_marker_59e06978f977cd9802f9794584f62ec6.bindPopup(popup_cbea2849f35953cd44b90c3ef65fde7d)
+        ;
+
+        
+    
+    
+            var circle_marker_22fb408754cf079fba08b0dfd324b74d = L.circleMarker(
+                [12.882765148340315, 74.82246096887427],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.1, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_40e4304c5594cf59a324419aeb8791bb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6206cead1d6bd54786bb18bdcbca845c = $(`<div id="html_6206cead1d6bd54786bb18bdcbca845c" style="width: 100.0%; height: 100.0%;">Location: Thokkottu<br>Number of Accidents: 1</div>`)[0];
+                popup_40e4304c5594cf59a324419aeb8791bb.setContent(html_6206cead1d6bd54786bb18bdcbca845c);
+            
+        
+
+        circle_marker_22fb408754cf079fba08b0dfd324b74d.bindPopup(popup_40e4304c5594cf59a324419aeb8791bb)
+        ;
+
+        
+    
+    
+            var circle_marker_49dd572ccb2c3bdcaf1212a7681ccc47 = L.circleMarker(
+                [12.884279438607456, 74.83009238164979],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_0d4502c40b3bfdf696b1ebf6203fe69b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f934e7656e0466859257af8b944de05a = $(`<div id="html_f934e7656e0466859257af8b944de05a" style="width: 100.0%; height: 100.0%;">Location: Jeppu<br>Number of Accidents: 5</div>`)[0];
+                popup_0d4502c40b3bfdf696b1ebf6203fe69b.setContent(html_f934e7656e0466859257af8b944de05a);
+            
+        
+
+        circle_marker_49dd572ccb2c3bdcaf1212a7681ccc47.bindPopup(popup_0d4502c40b3bfdf696b1ebf6203fe69b)
+        ;
+
+        
+    
+    
+            var circle_marker_aa7c7ea95406cb7efabfc56ce6a8a298 = L.circleMarker(
+                [12.886101558697067, 74.8357760676265],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.3, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_8f18eec5903c4110cc5e0b5520c0d69e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7533c4d77c9609e99f3f3714852b35ff = $(`<div id="html_7533c4d77c9609e99f3f3714852b35ff" style="width: 100.0%; height: 100.0%;">Location: Bolar<br>Number of Accidents: 3</div>`)[0];
+                popup_8f18eec5903c4110cc5e0b5520c0d69e.setContent(html_7533c4d77c9609e99f3f3714852b35ff);
+            
+        
+
+        circle_marker_aa7c7ea95406cb7efabfc56ce6a8a298.bindPopup(popup_8f18eec5903c4110cc5e0b5520c0d69e)
+        ;
+
+        
+    
+    
+            var circle_marker_01b47fe34d689e7c3854bff86ff35e6e = L.circleMarker(
+                [12.873892047341249, 74.83197663840744],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.3, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_09af1a129451aa02e1cfc556a8e4fbf7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ea338f04f7382304d808c391b9a7c1b = $(`<div id="html_9ea338f04f7382304d808c391b9a7c1b" style="width: 100.0%; height: 100.0%;">Location: Charmadi<br>Number of Accidents: 3</div>`)[0];
+                popup_09af1a129451aa02e1cfc556a8e4fbf7.setContent(html_9ea338f04f7382304d808c391b9a7c1b);
+            
+        
+
+        circle_marker_01b47fe34d689e7c3854bff86ff35e6e.bindPopup(popup_09af1a129451aa02e1cfc556a8e4fbf7)
+        ;
+
+        
+    
+    
+            var circle_marker_22af0f1226e1639410255322a743cc44 = L.circleMarker(
+                [12.888290594929286, 74.84789597604517],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_6c27d0811b2d4bb46a4cde3d939e6a03 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fd884289dbfcb4a5818d2f60aa4ad9d3 = $(`<div id="html_fd884289dbfcb4a5818d2f60aa4ad9d3" style="width: 100.0%; height: 100.0%;">Location: Vittal<br>Number of Accidents: 10</div>`)[0];
+                popup_6c27d0811b2d4bb46a4cde3d939e6a03.setContent(html_fd884289dbfcb4a5818d2f60aa4ad9d3);
+            
+        
+
+        circle_marker_22af0f1226e1639410255322a743cc44.bindPopup(popup_6c27d0811b2d4bb46a4cde3d939e6a03)
+        ;
+
+        
+    
+    
+            var circle_marker_b75f4e5061b8080a81ebaa931b88980a = L.circleMarker(
+                [12.873487800429825, 74.83754592281292],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_b1d25214331cb6c6f88affb73e854e0b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fd0e021f8f2812fb32d08dbfa18c5cfb = $(`<div id="html_fd0e021f8f2812fb32d08dbfa18c5cfb" style="width: 100.0%; height: 100.0%;">Location: Valachil<br>Number of Accidents: 5</div>`)[0];
+                popup_b1d25214331cb6c6f88affb73e854e0b.setContent(html_fd0e021f8f2812fb32d08dbfa18c5cfb);
+            
+        
+
+        circle_marker_b75f4e5061b8080a81ebaa931b88980a.bindPopup(popup_b1d25214331cb6c6f88affb73e854e0b)
+        ;
+
+        
+    
+    
+            var circle_marker_1db481c84f667133c6cb7773108eef40 = L.circleMarker(
+                [12.868322524265247, 74.85741693566852],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_90355f9725008e5af1080cfe7d6dd847 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c1bce330b4b2bf95be57bb125b2e9687 = $(`<div id="html_c1bce330b4b2bf95be57bb125b2e9687" style="width: 100.0%; height: 100.0%;">Location: Konaje<br>Number of Accidents: 6</div>`)[0];
+                popup_90355f9725008e5af1080cfe7d6dd847.setContent(html_c1bce330b4b2bf95be57bb125b2e9687);
+            
+        
+
+        circle_marker_1db481c84f667133c6cb7773108eef40.bindPopup(popup_90355f9725008e5af1080cfe7d6dd847)
+        ;
+
+        
+    
+    
+            var circle_marker_6927f5728ed62ea8200ed01f549a2b6a = L.circleMarker(
+                [12.876709815144896, 74.8451260568364],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.7, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_64973a7312ad4ea13a2eb69c39cf2821 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee425060fc31186f672d93b1a04492b3 = $(`<div id="html_ee425060fc31186f672d93b1a04492b3" style="width: 100.0%; height: 100.0%;">Location: Alangar<br>Number of Accidents: 7</div>`)[0];
+                popup_64973a7312ad4ea13a2eb69c39cf2821.setContent(html_ee425060fc31186f672d93b1a04492b3);
+            
+        
+
+        circle_marker_6927f5728ed62ea8200ed01f549a2b6a.bindPopup(popup_64973a7312ad4ea13a2eb69c39cf2821)
+        ;
+
+        
+    
+    
+            var circle_marker_bcaa7f3f2a9ddf2696599ea8cc078304 = L.circleMarker(
+                [12.890150313574145, 74.83897625586734],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.9, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_70c443ff1d569010958281e7c1460817 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_27b2d189a95e383034c417d0966cbf4f = $(`<div id="html_27b2d189a95e383034c417d0966cbf4f" style="width: 100.0%; height: 100.0%;">Location: Deralakatte<br>Number of Accidents: 9</div>`)[0];
+                popup_70c443ff1d569010958281e7c1460817.setContent(html_27b2d189a95e383034c417d0966cbf4f);
+            
+        
+
+        circle_marker_bcaa7f3f2a9ddf2696599ea8cc078304.bindPopup(popup_70c443ff1d569010958281e7c1460817)
+        ;
+
+        
+    
+    
+            var circle_marker_ca62d47db2ac1317bfeda92bf59d1bf6 = L.circleMarker(
+                [12.8869776487179, 74.83849068300476],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.3, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_7405caa0c07151ab186c556f054c8704 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a73aa43e903fa7260574954e0cefd7ac = $(`<div id="html_a73aa43e903fa7260574954e0cefd7ac" style="width: 100.0%; height: 100.0%;">Location: Surathkal<br>Number of Accidents: 3</div>`)[0];
+                popup_7405caa0c07151ab186c556f054c8704.setContent(html_a73aa43e903fa7260574954e0cefd7ac);
+            
+        
+
+        circle_marker_ca62d47db2ac1317bfeda92bf59d1bf6.bindPopup(popup_7405caa0c07151ab186c556f054c8704)
+        ;
+
+        
+    
+    
+            var circle_marker_9908709304cc3402b6f9947902c24163 = L.circleMarker(
+                [12.882033003365208, 74.85047318495735],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_b9fa6d197e8dab12d7a1a51cb634bca0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_901dc73a0bbb8d4cc51d6fe6f3e3d055 = $(`<div id="html_901dc73a0bbb8d4cc51d6fe6f3e3d055" style="width: 100.0%; height: 100.0%;">Location: Moodbidri<br>Number of Accidents: 5</div>`)[0];
+                popup_b9fa6d197e8dab12d7a1a51cb634bca0.setContent(html_901dc73a0bbb8d4cc51d6fe6f3e3d055);
+            
+        
+
+        circle_marker_9908709304cc3402b6f9947902c24163.bindPopup(popup_b9fa6d197e8dab12d7a1a51cb634bca0)
+        ;
+
+        
+    
+    
+            var circle_marker_de5b4b25522c99fccefc1b0f38e0f01a = L.circleMarker(
+                [12.853594919527866, 74.83912906213169],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_b1e48c1bacf200ca87ae96af30826beb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9721f763cba1449e7063311ac5f5142c = $(`<div id="html_9721f763cba1449e7063311ac5f5142c" style="width: 100.0%; height: 100.0%;">Location: Bajpe<br>Number of Accidents: 2</div>`)[0];
+                popup_b1e48c1bacf200ca87ae96af30826beb.setContent(html_9721f763cba1449e7063311ac5f5142c);
+            
+        
+
+        circle_marker_de5b4b25522c99fccefc1b0f38e0f01a.bindPopup(popup_b1e48c1bacf200ca87ae96af30826beb)
+        ;
+
+        
+    
+    
+            var circle_marker_7c533b30db5d78759229405dc7285cc1 = L.circleMarker(
+                [12.874811324201628, 74.84888783555895],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_c2f4193f73d380bed7258dc683316652 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_167e1873d120523c87da9acfeb35e1f2 = $(`<div id="html_167e1873d120523c87da9acfeb35e1f2" style="width: 100.0%; height: 100.0%;">Location: Ujire<br>Number of Accidents: 8</div>`)[0];
+                popup_c2f4193f73d380bed7258dc683316652.setContent(html_167e1873d120523c87da9acfeb35e1f2);
+            
+        
+
+        circle_marker_7c533b30db5d78759229405dc7285cc1.bindPopup(popup_c2f4193f73d380bed7258dc683316652)
+        ;
+
+        
+    
+    
+            var circle_marker_2b6924ee9d33c28b09656c20c58fc4bf = L.circleMarker(
+                [12.869757768078768, 74.82427118743827],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.4, "stroke": true, "weight": 3}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+        var popup_8cde3b70e6f55ed02d3b6517242330a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_672a83d2cc067f6ba13a93ed981a740b = $(`<div id="html_672a83d2cc067f6ba13a93ed981a740b" style="width: 100.0%; height: 100.0%;">Location: Bondel<br>Number of Accidents: 4</div>`)[0];
+                popup_8cde3b70e6f55ed02d3b6517242330a4.setContent(html_672a83d2cc067f6ba13a93ed981a740b);
+            
+        
+
+        circle_marker_2b6924ee9d33c28b09656c20c58fc4bf.bindPopup(popup_8cde3b70e6f55ed02d3b6517242330a4)
+        ;
+
+        
+    
+    
+            var marker_3534101ca3fdf7ab5bc2699ffdfd1905 = L.marker(
+                [12.874756453716754, 74.84056906502204],
+                {}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+            var icon_1cd99b76de298923d4eaf929a652345d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3534101ca3fdf7ab5bc2699ffdfd1905.setIcon(icon_1cd99b76de298923d4eaf929a652345d);
+        
+    
+        var popup_6150dd861a200f78bb0ca99592d0b467 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0a164a6cf4f9566d2a6a0f039595b88 = $(`<div id="html_a0a164a6cf4f9566d2a6a0f039595b88" style="width: 100.0%; height: 100.0%;">Hotspot Cluster 0<br>Average Accidents: 3418.00</div>`)[0];
+                popup_6150dd861a200f78bb0ca99592d0b467.setContent(html_a0a164a6cf4f9566d2a6a0f039595b88);
+            
+        
+
+        marker_3534101ca3fdf7ab5bc2699ffdfd1905.bindPopup(popup_6150dd861a200f78bb0ca99592d0b467)
+        ;
+
+        
+    
+    
+            var marker_6daead3cfa1cbb42386540694ce49962 = L.marker(
+                [12.881069194615405, 74.83141453706331],
+                {}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+            var icon_5620e618d35e335bb914c77fd56b4f3a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "ambulance", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6daead3cfa1cbb42386540694ce49962.setIcon(icon_5620e618d35e335bb914c77fd56b4f3a);
+        
+    
+        var popup_43cf51acb35d5938b6f34574d9039c84 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6281475b3a9cd9b51d111066681e3a67 = $(`<div id="html_6281475b3a9cd9b51d111066681e3a67" style="width: 100.0%; height: 100.0%;">Ambulance 1<br>Optimal Location</div>`)[0];
+                popup_43cf51acb35d5938b6f34574d9039c84.setContent(html_6281475b3a9cd9b51d111066681e3a67);
+            
+        
+
+        marker_6daead3cfa1cbb42386540694ce49962.bindPopup(popup_43cf51acb35d5938b6f34574d9039c84)
+        ;
+
+        
+    
+    
+            var marker_34910f14ca9dde9e7064f54724ef451d = L.marker(
+                [12.876342623069421, 74.85310001352728],
+                {}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+            var icon_e999afa7b4820e6c332c6b413800c03e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "ambulance", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_34910f14ca9dde9e7064f54724ef451d.setIcon(icon_e999afa7b4820e6c332c6b413800c03e);
+        
+    
+        var popup_3612686e3f3edf8fe010927a59fe9b24 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_766a26fdd17d1f493502cff8d582b5f9 = $(`<div id="html_766a26fdd17d1f493502cff8d582b5f9" style="width: 100.0%; height: 100.0%;">Ambulance 2<br>Optimal Location</div>`)[0];
+                popup_3612686e3f3edf8fe010927a59fe9b24.setContent(html_766a26fdd17d1f493502cff8d582b5f9);
+            
+        
+
+        marker_34910f14ca9dde9e7064f54724ef451d.bindPopup(popup_3612686e3f3edf8fe010927a59fe9b24)
+        ;
+
+        
+    
+    
+            var marker_101ee5475039826c3b6e6c03ebdfabf5 = L.marker(
+                [12.865959154840526, 74.8299507268084],
+                {}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+            var icon_19d1a3515e41e6eafd85713a21d801b0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "ambulance", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_101ee5475039826c3b6e6c03ebdfabf5.setIcon(icon_19d1a3515e41e6eafd85713a21d801b0);
+        
+    
+        var popup_c02027258ac7615d7f512baa29a0e9f9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_39a0c9975d5bb1ce28973da6c3dd70b8 = $(`<div id="html_39a0c9975d5bb1ce28973da6c3dd70b8" style="width: 100.0%; height: 100.0%;">Ambulance 3<br>Optimal Location</div>`)[0];
+                popup_c02027258ac7615d7f512baa29a0e9f9.setContent(html_39a0c9975d5bb1ce28973da6c3dd70b8);
+            
+        
+
+        marker_101ee5475039826c3b6e6c03ebdfabf5.bindPopup(popup_c02027258ac7615d7f512baa29a0e9f9)
+        ;
+
+        
+    
+    
+            var marker_65256b5e652e3d194a81da1c3af56a0d = L.marker(
+                [12.885015702365024, 74.84345701163409],
+                {}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+            var icon_3fb15fd633801c2ce881d560d792f1a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "ambulance", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_65256b5e652e3d194a81da1c3af56a0d.setIcon(icon_3fb15fd633801c2ce881d560d792f1a9);
+        
+    
+        var popup_35b353e1ed8b1700c79d933c0f538cfa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7af83397d468b1ce6e5763a236762d5d = $(`<div id="html_7af83397d468b1ce6e5763a236762d5d" style="width: 100.0%; height: 100.0%;">Ambulance 4<br>Optimal Location</div>`)[0];
+                popup_35b353e1ed8b1700c79d933c0f538cfa.setContent(html_7af83397d468b1ce6e5763a236762d5d);
+            
+        
+
+        marker_65256b5e652e3d194a81da1c3af56a0d.bindPopup(popup_35b353e1ed8b1700c79d933c0f538cfa)
+        ;
+
+        
+    
+    
+            var marker_87a7ed86ac889cf6df48b1ee1d985989 = L.marker(
+                [12.86365813549096, 74.85259598674398],
+                {}
+            ).addTo(map_21bbbc7894b74992007e9be2f7760096);
+        
+    
+            var icon_0a7936fec307ec22fcac7f9d9328a617 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "ambulance", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_87a7ed86ac889cf6df48b1ee1d985989.setIcon(icon_0a7936fec307ec22fcac7f9d9328a617);
+        
+    
+        var popup_d9d45b1509c0b6c02763c200f6bc3d99 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ffa0fbf55df3fdecedcb17f1f95b386 = $(`<div id="html_0ffa0fbf55df3fdecedcb17f1f95b386" style="width: 100.0%; height: 100.0%;">Ambulance 5<br>Optimal Location</div>`)[0];
+                popup_d9d45b1509c0b6c02763c200f6bc3d99.setContent(html_0ffa0fbf55df3fdecedcb17f1f95b386);
+            
+        
+
+        marker_87a7ed86ac889cf6df48b1ee1d985989.bindPopup(popup_d9d45b1509c0b6c02763c200f6bc3d99)
+        ;
+
+        
+    
+</script>
+</html>

@@ -32,7 +32,7 @@ const HotspotUpload = () => {
 
     try {
       // Send POST request to Flask server
-      const response = await axios.post('https://09b46591-1623-45ad-bae4-ae6837808c85-00-18ajhpjsfa65l.sisko.replit.dev/hotspots', formData, {
+      const response = await axios.post('http://127.0.0.1:5000/hotspots', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -63,7 +63,7 @@ const HotspotUpload = () => {
               value={numAmbulances}
               onChange={onNumAmbulancesChange}
               min="1"
-              max="10"
+              max="30"
               className="dropdown"
             />
           </div>

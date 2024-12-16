@@ -83,9 +83,10 @@ const CreateAccident = () => {
                 </div>
             )}
             <form onSubmit={handleSubmit} className="accident-form">
-                <h2>Create Accident</h2>
+                <h2>Report Accident</h2>
                 <textarea
-                    placeholder="Description"
+                    placeholder="John Doe - X Accident 
+Time of Accident"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     required
@@ -116,7 +117,7 @@ const CreateAccident = () => {
                         </Marker>
                     </MapContainer>
                 </div>
-                <button type="submit" className="submit-button">Create Accident</button>
+                <button type="submit" className="submit-button">Report Accident</button>
             </form>
         </div>
     );
